@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'work_dir' => '';
+	'work_dir' => './www';
 
 
 );
