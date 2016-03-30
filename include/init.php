@@ -8,6 +8,7 @@ if(isset($user) && isset($pass)){
 
 var_dump($user,$pass);
 echo "OK";
+
 $_SERVER['PHP_AUTH_USER'] = NULL;
 $_SERVER['PHP_AUTH_PW'] = NULL;
 
