@@ -12,8 +12,9 @@ echo "OK";
 $_SERVER['PHP_AUTH_USER'] = NULL;
 $_SERVER['PHP_AUTH_PW'] = NULL;
 
-} else {
+echo "ddd";
 
+} else {
 
 	header('WWW-Authenticate: Basic realm="USER LOGIN"');
 	header('HTTP/1.0 401 Unauthorized');
