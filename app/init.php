@@ -1,8 +1,17 @@
 <?php 
 
+define("WCP_APP_DIR", 'app');
 define('WCP_ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))));
-define('WCP_INC', WCP_ROOT.'/include');
-var_dump(WCP_INC);
+define('WCP_CORE', WCP_ROOT.'/'.WCP_APP_DIR.'/core');
+define("WCP_TPL", WCP_ROOT.'/template');
+include(WCP_CORE.'/func.php');
+
+$config = include(WCP_ROOT.'/conf/config.php');
+
+var_dump($config);
+
+$list = wcp_dir_list($config["work_dir"]);
+var_dump($list);
 
 // $user = $_SERVER['PHP_AUTH_USER'];
 // $pass = $_SERVER['PHP_AUTH_PW'];

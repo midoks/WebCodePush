@@ -1,9 +1,7 @@
 <?php
 
 return array(
-	'work_dir' => './www';
-
-
+	'work_dir' => 'D:/YOKA/HTML/bbs/trunk/include',	//¾ø¶ÔÂ·¾¶
 );
 
 ?>

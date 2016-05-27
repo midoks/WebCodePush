@@ -1,6 +1,6 @@
 <?php
 
 define("ABSPATH", str_replace('\\', '/', dirname(__FILE__)));
-include(ABSPATH."/include/init.php");
+include(ABSPATH."/app/init.php");
 
 ?>
