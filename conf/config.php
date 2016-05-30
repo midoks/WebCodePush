@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'work_dir' => 'D:/YOKA/HTML/bbs/trunk/include',	//绝对路径
+	'work_dir' => 'D:/YOKA/HTML/',	//绝对路径
 );
 
 ?>

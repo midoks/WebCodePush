@@ -3,35 +3,35 @@
 define("WCP_APP_DIR", 'app');
 define('WCP_ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))));
 define('WCP_CORE', WCP_ROOT.'/'.WCP_APP_DIR.'/core');
-define("WCP_TPL", WCP_ROOT.'/template');
+define('WCP_CTR', WCP_ROOT.'/'.WCP_APP_DIR.'/controller');
+define("WCP_TPL", WCP_ROOT.'/'.WCP_APP_DIR.'/template');
 include(WCP_CORE.'/func.php');
+include(WCP_CTR.'/base.php');
 
-$config = include(WCP_ROOT.'/conf/config.php');
+spl_autoload_register('app_autoload');
+app_start();
 
-var_dump($config);
+function app_autoload($className){
 
-$list = wcp_dir_list($config["work_dir"]);
-var_dump($list);
+	$_c = substr($className, 0, -strlen('Controller'));
+	$fn = WCP_CTR.'/'.$_c.'.php';
+	if (file_exists($fn)){
+		include_once($fn);
+	} else {
+		die("{$c} not found!");
+	}
+}
 
-// $user = $_SERVER['PHP_AUTH_USER'];
-// $pass = $_SERVER['PHP_AUTH_PW'];
-// //$type = $_SERVER['AUTH_TYPE']; 
+function app_start(){
 
-// if(isset($user) && isset($pass)){
+	$query = $_SERVER['QUERY_STRING'];
 
-// var_dump($user,$pass, $type);
-// echo "OK";
-// $_SERVER['PHP_AUTH_USER'] = "";
-// $_SERVER['PHP_AUTH_PW'] = "";
+	$_c = isset($_GET['_c']) ? $_GET['_c'] : 'main';
+	$_m = isset($_GET['_m']) ? $_GET['_m'] : 'index';
 
-// } else {
-
-
-// 	header('WWW-Authenticate: Basic realm="USER LOGIN"');
-// 	header('HTTP/1.0 401 Unauthorized');
- 
-
-// }
-
+	$_c = $_c . 'Controller';
+	$_obj = new $_c();
+	$_obj->$_m();
+}
 
 ?>
