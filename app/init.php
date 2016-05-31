@@ -31,7 +31,11 @@ function app_start(){
 
 	$_c = $_c . 'Controller';
 	$_obj = new $_c();
-	$_obj->$_m();
+	if (method_exists($_obj, $_m)){
+		$_obj->$_m();
+	} else {
+		die("{$c} not found method {$_m}");
+	}
 }
 
 ?>

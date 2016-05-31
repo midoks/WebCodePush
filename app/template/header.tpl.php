@@ -15,7 +15,7 @@
 	margin:0px;
 	padding:0px;
 	font: small sans-serif;
-	font-size:14px;
+	font-size:13px;
 }
 
     

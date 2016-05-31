@@ -1,35 +1,67 @@
 
 <style>
 .main_table{
-	margin-top: 60pt;
+	margin-top: 30pt;
 	margin-right: auto;
 	margin-left: auto;
-	width:700px;
+	width:1000px;
+	
 }
 
 .main_table tr{
-	padding: 3px;
+	background: #eee;
 }
 
-.main_table td{
+.main_table th{
 	border: 1px solid silver;
+	padding: 3px;
 }
 
 .list{
 
 }
+
+.list td{
+	border: 1px solid silver;
+	padding: 3px;
+	background: white;
+}
 </style>
 
 <table class='main_table'>
 <tr>
-<td colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</td>
+<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
 <tr>
 <tr>
-<td>1</td><td>1</td><td>1</td>
-<tr>
-
-<tr class="list">
-<td>1</td><td>1</td><td>1</td>
+<th style="text-align:center">文件名</th><th style="text-align:center">项目说明</th><th style="text-align:center">站点名</th>
 <tr>
 
+<?php
+foreach($this->list as $k=>$v){
+	
+	$str =  "<tr class='list'>";
+	//目录信息
+	$str .=	"<td style='width:20%;'><a href='#' style='text-decoration: none;'>{$v['fn']}</a></td>";
+	
+	//介绍
+	$info = isset($this->project_config[$v['fn']]) ? $this->project_config[$v['fn']] : '';
+	if (!empty($info)) {
+		$str .=	"<td style='width:60%;'>{$info['instro']}</td>";
+	} else {
+		$str .=	"<td style='width:60%;'>暂无</td>";
+	}
+	
+	//站点信息
+	if (!empty($info)) {
+		$str .=	"<td style='width:20%;'>{$info['site']}</td>";
+	} else {
+		$str .=	"<td style='width:20%;'>暂无</td>";
+	}
+	
+	
+	$str .= "</tr>";
+	
+	echo $str;
+}
+?>
 </table>

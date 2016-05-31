@@ -43,6 +43,11 @@ class baseController{
 		include(WCP_TPL.'/'.$name.'.tpl.php');
 		include(WCP_TPL.'/footer.tpl.php');
 	}
+	
+	public function _request(){
+		
+		
+	}
 
 }
 ?>
