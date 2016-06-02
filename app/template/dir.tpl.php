@@ -4,7 +4,7 @@
 	margin-top: 30pt;
 	margin-right: auto;
 	margin-left: auto;
-	width:600px;
+	width:620px;
 }
 
 .main_table tr{

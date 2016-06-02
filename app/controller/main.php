@@ -26,8 +26,13 @@ class mainController extends baseController{
 		$this->list = wcp_fileinfo_list($abspath);
 
 		//var_dump($this->list);
-
 		$this->load('dir');
+	}
+
+	//项目同步
+	public function _copy(){
+
+		echo '';
 	}
 	
 }
