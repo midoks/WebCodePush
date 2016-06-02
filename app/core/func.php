@@ -59,7 +59,7 @@ function wcp_fileinfo_list($dir){
 				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
 
 				$arr['info']['filegroup'] = filegroup($arr['abspath']);
-				$arr['info']['fileowner'] = fileowner($arr['abspath']);
+				$arr['info']['fileowner'] =  GetUsernameFromUid( fileowner($arr['abspath']) );
 				$arr['info']['fileperms'] = fileperms($arr['abspath']);
 
 				$list[] = $arr;
@@ -68,6 +68,34 @@ function wcp_fileinfo_list($dir){
 	}
 	return $list;
 }
+
+
+function GetUsernameFromUid($uid){
+	var_dump($uid);
+	var_dump(get_current_user());
+	if (function_exists('posix_getpwuid')) { 
+		$a = posix_getpwuid($uid); 
+		return $a['name']; 
+	} 
+	# This works on BSD but not with GNU 
+	elseif (strstr(php_uname('s'), 'BSD')) { 
+		exec('id -u ' . (int) $uid, $o, $r); 
+		if ($r == 0) {
+		  return trim($o['0']); 
+		} else {
+		  return $uid; 
+		}
+	} elseif (is_readable('/etc/passwd')) { 
+		exec(sprintf('grep :%s: /etc/passwd | cut -d: -f1', (int) $uid), $o, $r); 
+		if ($r == 0){
+		  return trim($o['0']); 
+		} else {
+		  return $uid;
+		}
+	} else {
+		return $uid;
+	}
+} 
 
 
 ?>
