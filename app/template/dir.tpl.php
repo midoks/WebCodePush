@@ -74,7 +74,7 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['info']['mtime']}</td>";
 
 	//权限
-	$str .=	"<td>{$v['info']['filegroup']}</td>";
+	$str .=	"<td>{$v['info']['fileperms']}</td>";
 
 	//所有者
 	$str .=	"<td>{$v['info']['fileowner']}</td>";
