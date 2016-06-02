@@ -94,14 +94,6 @@ function GetUsernameFromUid($uid){
 		} else {
 		  return $uid; 
 		}
-	} elseif (is_readable('/etc/passwd')) { 
-		exec(sprintf('grep :%s: /etc/passwd | cut -d: -f1', (int) $uid), $o, $r);
-		print($r);
-		if ($r == 0){
-		  return trim($o['0']); 
-		} else {
-		  return $uid;
-		}
 	} else {
 		return $uid;
 	}
