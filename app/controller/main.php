@@ -25,7 +25,7 @@ class mainController extends baseController{
 
 		$this->list = wcp_fileinfo_list($abspath);
 
-		//var_dump($this->list);
+		var_dump($this->list);
 
 		$this->load('dir');
 	}

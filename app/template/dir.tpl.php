@@ -71,8 +71,7 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['info']['size']}</td>";
 
 	//最近修改时间
-	$mtime = date('Y-m-d H:i:s', $v['info']['mtime']);
-	$str .=	"<td>{$mtime}</td>";
+	$str .=	"<td>{$v['info']['mtime']}</td>";
 
 	//权限
 	$str .=	"<td>{$v['info']['filegroup']}</td>";

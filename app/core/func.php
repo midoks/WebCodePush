@@ -56,8 +56,11 @@ function wcp_fileinfo_list($dir){
 				$arr['abspath'] = rtrim($dir,'/').'/'.$v;
 				$arr['info'] = stat($arr['abspath']);
 
+				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
+
 				$arr['info']['filegroup'] = filegroup($arr['abspath']);
 				$arr['info']['fileowner'] = fileowner($arr['abspath']);
+				$arr['info']['fileperms'] = fileperms($arr['abspath']);
 
 				$list[] = $arr;
 			}
