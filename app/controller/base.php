@@ -44,8 +44,10 @@ class baseController{
 		include(WCP_TPL.'/footer.tpl.php');
 	}
 	
-	public function _request(){
-		
+	/**
+	 * 
+	 */
+	public function buildUrl($_m ,$args = array(), $_c = 'main'){
 		
 	}
 

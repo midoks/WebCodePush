@@ -8,6 +8,7 @@ define("WCP_TPL", WCP_ROOT.'/'.WCP_APP_DIR.'/template');
 include(WCP_CORE.'/func.php');
 include(WCP_CTR.'/base.php');
 
+date_default_timezone_set('PRC');
 spl_autoload_register('app_autoload');
 app_start();
 

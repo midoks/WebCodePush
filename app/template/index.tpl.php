@@ -26,6 +26,10 @@
 	padding: 3px;
 	background: white;
 }
+
+.list a{
+	font-size:16px;
+}
 </style>
 
 <table class='main_table'>
@@ -41,7 +45,8 @@ foreach($this->list as $k=>$v){
 	
 	$str =  "<tr class='list'>";
 	//目录信息
-	$str .=	"<td style='width:20%;'><a href='#' style='text-decoration: none;'>{$v['fn']}</a></td>";
+	$encode_abspath = urlencode($v['abspath']);
+	$str .=	"<td style='width:20%;'>[<a href='/?_c=main&_m=_dir&abspath={$encode_abspath}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
 	
 	//介绍
 	$info = isset($this->project_config[$v['fn']]) ? $this->project_config[$v['fn']] : '';
