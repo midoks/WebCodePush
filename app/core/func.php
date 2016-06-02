@@ -57,7 +57,7 @@ function wcp_fileinfo_list($dir){
 				$arr['info'] = stat($arr['abspath']);
 
 				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
-				$arr['info']['size'] = GetFileSize($arr['info']['size']);
+				$arr['info']['size'] = GetFileSize(filesize($arr['abspath']));
 
 				$arr['info']['filegroup'] = filegroup($arr['abspath']);
 				//$arr['info']['fileowner'] =  GetUsernameFromUid( fileowner($arr['abspath']) );
@@ -95,7 +95,8 @@ function GetUsernameFromUid($uid){
 		  return $uid; 
 		}
 	} elseif (is_readable('/etc/passwd')) { 
-		exec(sprintf('grep :%s: /etc/passwd | cut -d: -f1', (int) $uid), $o, $r); 
+		exec(sprintf('grep :%s: /etc/passwd | cut -d: -f1', (int) $uid), $o, $r);
+		print($r);
 		if ($r == 0){
 		  return trim($o['0']); 
 		} else {
