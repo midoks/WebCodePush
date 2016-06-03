@@ -27,14 +27,14 @@
 }
 
 .list a{
-	font-size:14px;
+	font-size:12px;
 }
 
 .list input{
 	padding: 0px 6px 0px 6px;
 }
 </style>
-
+<form id='main_upload' action="<?php echo($this->buildUrl('_copy')); ?>" method='POST'>
 <table class='main_table'>
 <tr>
 <th colspan="8" style="text-align: center;font-size:16px;font-weight: bold;">文件管理</th>
@@ -56,13 +56,15 @@ foreach($this->list as $k=>$v){
 	$str =  "<tr class='list'>";
 
 	//选择
-	$str .= "<td style='text-align:center;'><input type='checkbox' name='checked' value='true'></td>";
+	$str .= "<td style='text-align:center;'><input type='checkbox' name='f{$k}' value='{$v['abspath']}'></td>";
 
 	//目录信息
-	$encode_abspath = urlencode($v['abspath']);
+	
+	$url = $this->buildUrl('_dir', array(
+			'abspath' => $v['abspath']
+		));
 	if($v['type']=='dir'){
-		$str .=	"<td>"."<img src='resoures/image/dir.gif' alt='folder'>".
-				"[<a href='/?_c=main&_m=_dir&abspath={$encode_abspath}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
+		$str .=	"<td>"."<img src='resoures/image/dir.gif' alt='folder'>[<a href='{$url}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
 	} else {
 		$str .=	"<td><img src='resoures/image/file.gif' alt='file'>[{$v['fn']}]</td>";
 	}
@@ -83,7 +85,7 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['info']['filegroup']}</td>";
 
 	//处理方法
-	$str .=	"<td style='text-align:center;'><input class='small' type='submit' name='submit' value='>' /></td>";
+	$str .=	"<td style='text-align:center;'><input class='small' type='submit' name='submit{$k}' value='>' /></td>";
 	
 	$str .= "</tr>";
 	
@@ -91,14 +93,28 @@ foreach($this->list as $k=>$v){
 }
 ?>
 
+<script type="text/javascript">
+function submit_click(_this){
+	var f = document.getElementById('main_upload');
+	for (var i=0;i<f.elements.length;i++){
+		var e = f.elements[i];
+		if (e.type == 'checkbox' && e.name != 'check_all_box'){
+			console.log(e.checked,_this.checked);
+			e.checked = !e.checked;
+		}
+	}
+}
+</script>
+
 <tr>
 	<th style="font-size:12px;text-align:center;">
-		<input type='checkbox' name='checked' value='true'>
+		<input type='checkbox' name='check_all_box' value='true' onclick="submit_click(this)">
 		<img src='resoures/image/arrow.gif' alt='index'>
 		
 	</th>
 	<th colspan="7" style="text-align:left;">
-		<input type='submit' name='checked' value='发布' style="font-size:10px;">
+		<input type='submit' name='submit' value='发布' style="font-size:10px;">
 	</th>
 <tr>
 </table>
+</form>

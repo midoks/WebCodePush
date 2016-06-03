@@ -33,6 +33,8 @@ class mainController extends baseController{
 	public function _copy(){
 
 		echo '';
+
+		var_dump($_POST);
 	}
 	
 }

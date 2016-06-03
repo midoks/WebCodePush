@@ -45,10 +45,12 @@ class baseController{
 	}
 	
 	/**
-	 * 
+	 * 组装url
 	 */
 	public function buildUrl($_m ,$args = array(), $_c = 'main'){
-		
+		$args = http_build_query($args);
+		$url = "/index.php?_c={$_c}&_m={$_m}&{$args}";
+		return $url;
 	}
 
 }
