@@ -32,9 +32,17 @@ class mainController extends baseController{
 	//项目同步
 	public function _copy(){
 
-		echo '';
+		// if (isset($_POST)){
+		// 	var_dump($_POST);
+		// } else {
+		// 	exit('not files ');
+		// }
+		//$ret = NULL;
+		exec(WCP_ROOT."/shell/common.sh file", $ret, $status );
 
-		var_dump($_POST);
+		var_dump($ret);
+		var_dump($status);
+
 	}
 	
 }

@@ -56,10 +56,8 @@ foreach($this->list as $k=>$v){
 	$str =  "<tr class='list'>";
 
 	//选择
-	$str .= "<td style='text-align:center;'><input type='checkbox' name='f{$k}' value='{$v['abspath']}'></td>";
-
+	$str .= "<td style='text-align:center;'><input type='checkbox' name='f[]' value='{$v['abspath']}'></td>";
 	//目录信息
-	
 	$url = $this->buildUrl('_dir', array(
 			'abspath' => $v['abspath']
 		));
@@ -71,24 +69,19 @@ foreach($this->list as $k=>$v){
 	
 	//大小
 	$str .=	"<td>{$v['info']['size']}</td>";
-
 	//最近修改时间
 	$str .=	"<td>{$v['info']['mtime']}</td>";
-
 	//权限
 	$str .=	"<td>{$v['info']['fileperms']}</td>";
-
 	//所有者
 	$str .=	"<td>{$v['info']['fileowner']}</td>";
-
 	//所属组
 	$str .=	"<td>{$v['info']['filegroup']}</td>";
 
 	//处理方法
-	$str .=	"<td style='text-align:center;'><input class='small' type='submit' name='submit{$k}' value='>' /></td>";
+	$str .=	"<td style='text-align:center;'><input type='submit' name='submit{$k}' value='>' onclick='return button_click(this);'/></td>";
 	
 	$str .= "</tr>";
-	
 	echo $str;
 }
 ?>
@@ -103,6 +96,13 @@ function submit_click(_this){
 			e.checked = !e.checked;
 		}
 	}
+}
+
+function button_click(_this){
+	console.log("_log");
+
+	//_this
+	return false;
 }
 </script>
 
