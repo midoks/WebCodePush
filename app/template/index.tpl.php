@@ -28,7 +28,7 @@
 }
 
 .list a{
-	font-size:16px;
+	font-size:14px;
 }
 </style>
 
@@ -37,7 +37,7 @@
 <th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
 <tr>
 <tr>
-<th style="text-align:center">文件名</th><th style="text-align:center">项目说明</th><th style="text-align:center">站点名</th>
+<th style="text-align:center">项目名</th><th style="text-align:center">项目说明</th><th style="text-align:center">站点名</th>
 <tr>
 
 <?php
