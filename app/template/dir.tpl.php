@@ -104,6 +104,12 @@ function button_click(_this){
 	//_this
 	return false;
 }
+
+function activate (name) {
+	if (document && document.forms[0] && document.forms[0].elements['focus']) {
+		document.forms[0].elements['focus'].value = name;
+	}
+}
 </script>
 
 <tr>
