@@ -1,7 +1,11 @@
 <?php
 
 return array(
-	'work_dir' => 'D:/YOKA/HTML/',	//绝对路径
+	'work_dir'		=> 'D:/YOKA/HTML/',	//绝对路径
+	'hidden_file'	=> array(
+		'.', '..', '.metadata',
+		'.svn',
+	),
 );
 
 ?>

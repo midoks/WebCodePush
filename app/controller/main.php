@@ -5,13 +5,14 @@ class mainController extends baseController{
 	public function index(){
 		
 		$list = wcp_dir_list($this->config["work_dir"]);
+		$list = wcp_filter_list($list, $this->config['hidden_file']);
 		$this->list = $list;
-		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
+
 		$this->load('index');
 	}
 	
 	//文件页
-	public function _dir(){	
+	public function _dir(){
 		//var_dump($_GET);
 		if(!isset($_GET['abspath'])){
 			exit('参数有误');
@@ -23,7 +24,10 @@ class mainController extends baseController{
 			exit('目录不存在');
 		}
 
-		$this->list = wcp_fileinfo_list($abspath);
+		$list = wcp_fileinfo_list($abspath);
+		$list = wcp_filter_list($list, $this->config['hidden_file']);
+
+		$this->list = $list;
 
 		//var_dump($this->list);
 		$this->load('dir');
@@ -38,10 +42,12 @@ class mainController extends baseController{
 		// 	exit('not files ');
 		// }
 		//$ret = NULL;
-		exec(WCP_ROOT."/shell/common.sh file", $ret, $status );
 
-		var_dump($ret);
-		var_dump($status);
+		var_dump($_POST);
+		// exec(WCP_ROOT."/shell/common.sh file", $ret, $status );
+
+		// var_dump($ret);
+		// var_dump($status);
 
 	}
 	

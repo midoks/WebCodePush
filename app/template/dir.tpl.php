@@ -56,7 +56,7 @@ foreach($this->list as $k=>$v){
 	$str =  "<tr class='list'>";
 
 	//选择
-	$str .= "<td style='text-align:center;'><input type='checkbox' name='f[]' value='{$v['abspath']}'></td>";
+	$str .= "<td style='text-align:center;'><input type='checkbox' name='checkbox{$k}' value='true' onfocus='return button_click('o');'></td>";
 	//目录信息
 	$url = $this->buildUrl('_dir', array(
 			'abspath' => $v['abspath']
@@ -79,7 +79,9 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['info']['filegroup']}</td>";
 
 	//处理方法
-	$str .=	"<td style='text-align:center;'><input type='submit' name='submit{$k}' value='>' onclick='return button_click(this);'/></td>";
+	$str .=	"<input type='hidden' name='f{$k}' value='{$v['abspath']}' />";
+	//处理方法
+	$str .=	"<td style='text-align:center;'><input type='submit' name='submit{$k}' value='>' onfocus='return button_click('o');'/></td>";
 	
 	$str .= "</tr>";
 	echo $str;
@@ -99,16 +101,14 @@ function submit_click(_this){
 }
 
 function button_click(_this){
-	console.log("_log");
-
-	//_this
-	return false;
-}
-
-function activate (name) {
 	if (document && document.forms[0] && document.forms[0].elements['focus']) {
 		document.forms[0].elements['focus'].value = name;
 	}
+	return true;
+}
+
+function activate (name) {
+	
 }
 </script>
 

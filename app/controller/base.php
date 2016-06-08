@@ -8,6 +8,8 @@ class baseController{
 	//初始化
 	public function __construct(){
 		$this->config = include(WCP_ROOT.'/conf/config.php');
+		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
+		
 		$this->_acl();
 		header('CodePush: '.self::version);
 	}

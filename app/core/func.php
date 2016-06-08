@@ -72,6 +72,21 @@ function wcp_fileinfo_list($dir){
 	return $list;
 }
 
+/**
+ * 过滤文件名
+ * @param array $list 需要过滤的文件列表
+ * @param array $filter_list 过滤的字符
+ */
+function wcp_filter_list($list, $filter_list){
+	$_list = array();
+	foreach( $list as $k => $v ){
+		if (!in_array($v['fn'], $filter_list)){
+			$_list[] = $v;
+		}
+	}
+	return $_list;
+}
+
 function GetFileSize($size){
 	return  number_format(($size/1024),2)."K";
 }
