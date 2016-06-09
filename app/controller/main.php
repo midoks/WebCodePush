@@ -83,9 +83,9 @@ class mainController extends baseController{
 				echo $rv."<br>";
 			}
 			if ($status > 0 ){
-				echo "<span style='color:red;'>rsync -avz {$value} {$t_addr} FAIL</span>";
+				echo "<span style='color:red;'>rsync -avz {$value} {$t_addr} FAIL</span><br>";
 			} else {
-				echo "<span style='color:blue;'>rsync -avz {$value} {$t_addr} SUCCESS</span>";
+				echo "<span style='color:blue;'>rsync -avz {$value} {$t_addr} SUCCESS</span><br>";
 			}
 			
 		}
