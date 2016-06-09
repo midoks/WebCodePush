@@ -7,5 +7,5 @@ http://rsync.samba.org/
 
 
 ### 截图
-[![项目页](/screenshots/screenshots_1.png)](/screenshots/screenshots_1.png)
-[![文件页](/screenshots/screenshots_2.png)](/screenshots/screenshots_2.png)
+[![项目页](/screenshot/screenshots_1.png)](/screenshot/screenshots_1.png)
+[![文件页](/screenshot/screenshots_2.png)](/screenshot/screenshots_2.png)
