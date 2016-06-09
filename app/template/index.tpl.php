@@ -47,7 +47,8 @@ foreach($this->list as $k=>$v){
 	
 	//目录信息
 	$url = $this->buildUrl('_dir', array(
-			'abspath' => $v['abspath']
+			'abspath' => $v['abspath'],
+			'target'  => $v['fn'],
 		));
 	$str .=	"<td style='width:20%;'>[<a href='{$url}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
 	

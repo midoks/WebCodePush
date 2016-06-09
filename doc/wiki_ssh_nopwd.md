@@ -1,16 +1,17 @@
-### SSHÃâµÇÂ½ÉèÖÃ
+### SSHå…ç™»é™†è®¾ç½®
 
-ÓÐ»úÆ÷A(192.168.1.155)£¬B(192.168.1.181)¡£ÏÖÏëAÍ¨¹ýsshÃâÃÜÂëµÇÂ¼µ½B¡£
+æœ‰æœºå™¨A(192.168.1.155)ï¼ŒB(192.168.1.181)ã€‚çŽ°æƒ³Aé€šè¿‡sshå…å¯†ç ç™»å½•åˆ°Bã€‚
 
-### ÔÚA»úÏÂÉú³É¹«Ô¿/Ë½Ô¿¶Ô¡£
-ssh-keygen -t rsa
-ssh-keygen -t rsa -P 'ÃÜÂë'
+### åœ¨Aæœºä¸‹ç”Ÿæˆå…¬é’¥/ç§é’¥å¯¹ã€‚
+- ssh-keygen -t rsa
+- ssh-keygen -t rsa -P 'å¯†ç '
 
-### ´«µ½BÖÐ
+### ä¼ åˆ°Bä¸­
+scp id_rsa.pub root@120.76.123.86:/root/.ssh
 
-### ÔÚBÖÐ.ssh/
-cat id_rsa.pub >> authorized_keys
-chmod 600 authorized_keys
+### åœ¨Bä¸­.ssh/
+- cat id_rsa.pub >> authorized_keys 
+- chmod 600 authorized_keys
 
 
 ### OK

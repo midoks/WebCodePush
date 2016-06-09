@@ -87,6 +87,24 @@ function wcp_filter_list($list, $filter_list){
 	return $_list;
 }
 
+/**
+ * 过滤变量
+ * @param array $list 需要过滤数组
+ * @param string $prefix 前缀字符串
+ */
+function wcp_list_filter_prefex($list, $prefix){
+	$_list = array();
+	foreach ($list as $key => $value) {
+		$_prelen = strlen($prefix);
+		$_pre = substr($key, 0, $_prelen);
+		$key = substr($key, $_prelen);
+		if ($_pre == $prefix){
+			$_list[$key] = $value;
+		}
+	}
+	return $_list;
+}
+
 function GetFileSize($size){
 	return  number_format(($size/1024),2)."K";
 }

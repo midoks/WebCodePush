@@ -1,1 +1,0 @@
-rsync -avz /root/openresty/ 120.76.123.86:/cjs_test

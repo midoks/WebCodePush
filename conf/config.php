@@ -1,9 +1,20 @@
 <?php
 
+
+if (strpos(PHP_OS, 'Windows')){
+	return array(
+		'work_dir'		=> 'D:/YOKA/HTML/',	//é¡¹ç›®åœ°å€
+		'hidden_file'	=> array(
+			'.', '..', '.metadata','.DS_Store',
+			'.svn',
+		),
+	);
+}
+
 return array(
-	'work_dir'		=> 'D:/YOKA/HTML/',	//¾ø¶ÔÂ·¾¶
+	'work_dir'		=> '/Users/midoks/Desktop/www',	//é¡¹ç›®åœ°å€
 	'hidden_file'	=> array(
-		'.', '..', '.metadata',
+		'.', '..', '.metadata','.DS_Store',
 		'.svn',
 	),
 );

@@ -83,6 +83,18 @@ class baseController{
 		}
 	}
 
+	public function getLoginName(){
+		$user = isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '';
+		if (empty($user)){
+			$user = isset($_SESSION['isLogin']['user']) ? $_SESSION['isLogin']['user'] : '';
+		}
+		if (empty($user)){
+			return false;
+		}
+
+		return $user;
+	}
+
 	private function _check_user($user, $passwod){
 		$file = WCP_ROOT."/conf/acl/{$user}.php";
 		if (file_exists($file)){
@@ -136,9 +148,9 @@ class baseController{
 	 *	@name string 模板
 	 */
 	public function load($name){
-		include(WCP_TPL.'/header.tpl.php');
-		include(WCP_TPL.'/'.$name.'.tpl.php');
-		include(WCP_TPL.'/footer.tpl.php');
+		include_once(WCP_TPL.'/header.tpl.php');
+		include_once(WCP_TPL.'/'.$name.'.tpl.php');
+		include_once(WCP_TPL.'/footer.tpl.php');
 	}
 	
 	/**

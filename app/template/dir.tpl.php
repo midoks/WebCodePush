@@ -34,7 +34,14 @@
 	padding: 0px 6px 0px 6px;
 }
 </style>
-<form id='main_upload' action="<?php echo($this->buildUrl('_copy')); ?>" method='POST'>
+<?php
+
+	$_args = [];
+	if(isset($_GET['target'])){
+		$_args = array('target'  => $_GET['target']);
+	}
+?>
+<form id='main_upload' action="<?php echo($this->buildUrl('_copy', $_args)); ?>" method='POST'>
 <table class='main_table'>
 <tr>
 <th colspan="8" style="text-align: center;font-size:16px;font-weight: bold;">文件管理</th>
@@ -57,10 +64,14 @@ foreach($this->list as $k=>$v){
 
 	//选择
 	$str .= "<td style='text-align:center;'><input type='checkbox' name='checkbox{$k}' value='true' onfocus='return button_click('o');'></td>";
+
+	$dargs = array('abspath' => $v['abspath']);
+	$args = array_merge($dargs, $_args);
+
 	//目录信息
-	$url = $this->buildUrl('_dir', array(
-			'abspath' => $v['abspath']
-		));
+	$url = $this->buildUrl('_dir', $args);
+	//var_dump($url);
+	$args = [];
 	if($v['type']=='dir'){
 		$str .=	"<td>"."<img src='resoures/image/dir.gif' alt='folder'>[<a href='{$url}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
 	} else {
@@ -79,9 +90,9 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['info']['filegroup']}</td>";
 
 	//处理方法
-	$str .=	"<input type='hidden' name='f{$k}' value='{$v['abspath']}' />";
+	$str .=	"<input type='hidden' name='file{$k}' value='{$v['abspath']}' />";
 	//处理方法
-	$str .=	"<td style='text-align:center;'><input type='submit' name='submit{$k}' value='>' onfocus='return button_click('o');'/></td>";
+	$str .=	"<td style='text-align:center;'><input type='submit' name='single{$k}' value='>' onfocus='return button_click('o');'/></td>";
 	
 	$str .= "</tr>";
 	echo $str;
@@ -107,9 +118,6 @@ function button_click(_this){
 	return true;
 }
 
-function activate (name) {
-	
-}
 </script>
 
 <tr>
