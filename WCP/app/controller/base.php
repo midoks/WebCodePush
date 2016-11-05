@@ -9,10 +9,13 @@ class baseController{
 
 	//初始化
 	public function __construct(){
-		$this->config = include(WCP_ROOT.'/conf/config.php');
-		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
 		
 		$this->_acl();
+
+		$this->config = include(WCP_ROOT.'/conf/config.php');
+		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
+
+
 		header('WCP_VERSION: '.self::VERSION);
 		header('WCP_AUTHOR: '.self::AUTHOR);
 		header('WCP_AUTHOR_EMAIL: '.self::AUTHOR_EMAIL);
@@ -25,7 +28,7 @@ class baseController{
 		} else if (strpos(PHP_SAPI, 'fpm') !== false ){
 			$this->_acl_nginx();
 		} else {
-			exit('need nginx or apache as server');
+			echo('need nginx or apache as server');
 		}
 	}
 
@@ -42,14 +45,12 @@ class baseController{
 			} else {
 				header("WWW-Authenticate:Basic realm='Private'");
 				header('HTTP/1.0 401 Unauthorized');
-    			print "You are unauthorized to enter this area.";
-    			exit;
+    			exit("You are unauthorized to enter this area.");
 			}
 		} else {
 			header("WWW-Authenticate:Basic realm='Private'");
     		header('HTTP/1.0 401 Unauthorized');
-    		print "You are unauthorized to enter this area.";
-    		exit;
+    		exit("You are unauthorized to enter this area.");
 		}
 	}
 
@@ -82,8 +83,8 @@ class baseController{
 			$pwd = isset($_SESSION['isLogin']['pwd']) ? $_SESSION['isLogin']['pwd'] : '';
 			$this->_check_user($user, $pwd);
 		} else {
-			$this->load('login');
-			exit();
+			$this->loadLogin('login');
+			exit;
 		}
 	}
 
@@ -156,6 +157,16 @@ class baseController{
 		include_once(WCP_TPL.'/'.$name.'.tpl.php');
 		include_once(WCP_TPL.'/footer.tpl.php');
 	}
+
+	/**
+	 *	加载模板
+	 *	@name string 模板
+	 */
+	public function loadLogin($name){
+		include_once(WCP_TPL.'/header.tpl.php');
+		include_once(WCP_TPL.'/'.$name.'.tpl.php');
+		include_once(WCP_TPL.'/login_footer.tpl.php');
+	}
 	
 	/**
 	 * 组装url
@@ -169,6 +180,10 @@ class baseController{
 		}
 		$url = "/index.php?_c={$_c}&_m={$_m}";
 		return $url;
+	}
+
+	public function jump($url){
+		header("Location: ".$url);
 	}
 
 }

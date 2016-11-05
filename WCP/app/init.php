@@ -19,7 +19,8 @@ function app_autoload($className){
 	if (file_exists($fn)){
 		include_once($fn);
 	} else {
-		die("{$c} not found!");
+		include_once(WCP_CTR.'/main.php');
+		//die("{$c} not found!");
 	}
 }
 
@@ -35,7 +36,8 @@ function app_start(){
 	if (method_exists($_obj, $_m)){
 		$_obj->$_m();
 	} else {
-		die("{$c} not found method {$_m}");
+		$_obj->index();
+		//die("{$c} not found method {$_m}");
 	}
 }
 

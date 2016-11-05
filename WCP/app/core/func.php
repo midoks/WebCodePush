@@ -9,8 +9,7 @@ function wcp_dir_list($dir){
 		$_list = scandir($dir);
 		foreach($_list as $k=>$v){
 			$arr = array();
-			if($v == '.' || $v == '..'){
-			} else {
+			if($v != '.' || $v != '..'){
 				$arr['fn'] = $v;
 				$abspath = rtrim($dir,'/').'/'.$v;
 

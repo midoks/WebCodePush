@@ -1,7 +1,7 @@
 
 <style>
 .main_table{
-	margin-top: 30pt;
+	margin-top: 20pt;
 	margin-right: auto;
 	margin-left: auto;
 	width:1000px;
