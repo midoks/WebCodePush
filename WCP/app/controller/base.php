@@ -2,7 +2,9 @@
 
 class baseController{
 
-	const version = '1.0';
+	const VERSION = '2.0';
+	const AUTHOR = 'midoks';
+	const AUTHOR_EMAIL = 'midoks@163.com';
 	public $config;
 
 	//初始化
@@ -11,7 +13,9 @@ class baseController{
 		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
 		
 		$this->_acl();
-		header('CodePush: '.self::version);
+		header('WCP_VERSION: '.self::VERSION);
+		header('WCP_AUTHOR: '.self::AUTHOR);
+		header('WCP_AUTHOR_EMAIL: '.self::AUTHOR_EMAIL);
 	}
 
 	//权限管理

@@ -1,4 +1,4 @@
-# webCodePush
+### -- WCP --
 
 # 操作
 http://rsync.samba.org/
@@ -17,5 +17,8 @@ sh 命令执行文件
 
 
 ### 截图
-[![项目页](/screenshot/screenshot_1.png)](/screenshot/screenshot_1.png)
-[![文件页](/screenshot/screenshot_2.png)](/screenshot/screenshot_2.png)
+[![项目页](WCP/screenshot/screenshot_1.png)](WCP/screenshot/screenshot_1.png)
+[![文件页](WCP/screenshot/screenshot_2.png)](WCP/screenshot/screenshot_2.png)
+
+
+### -- DCP --

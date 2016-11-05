@@ -9,7 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 <meta charset="UTF-8" />
-<title></title>
+<link rel="shortcut icon" href="\\midoks.cachecha.com/resources/img/favicon.ico">
+<title>WCP「网站代码同步」</title>
 <style>
 *{
 	margin:0px;
@@ -19,6 +20,11 @@
 }
 
     
-</style> 
+</style>
 </head>
 <body>
+
+<!-- 说明 -->
+<div style="font-size:26px; font-weight: bold; margin:20px 0px 3px 0px;text-align: center;">WCP-网站代码同步<br /></div>
+
+<hr />
