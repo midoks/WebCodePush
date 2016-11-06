@@ -33,14 +33,20 @@
 </style>
 
 <table class='main_table'>
-	<tr>
-		<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">系统管理</th>
-	<tr>
 
-	<tr>
-		<th style="text-align:center">项目名</th>
-		<th style="text-align:center">项目说明</th>
-		<th style="text-align:center">站点名</th>
-	<tr>
+<tr>
+	<th style="text-align: center;font-size:16px;font-weight: bold;">发布系统管理</th>
+<tr>
+
+<tr>
+	<th style="text-align:center;width:100px;">
+		<div>
+		<a style="text-decoration: none;" 
+			href="<?php echo $this->buildUrl('project', '', 'sys'); ?>">项目管理</a>
+		<a style="text-decoration: none;" 
+			href="<?php echo $this->buildUrl('user', '', 'sys'); ?>">开发者管理</a>
+		</div>
+	</th>
+<tr>
 
 </table>

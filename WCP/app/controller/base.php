@@ -5,20 +5,41 @@ class baseController{
 	const VERSION = '2.0';
 	const AUTHOR = 'midoks';
 	const AUTHOR_EMAIL = 'midoks@163.com';
+
 	public $config;
+	public $userinfo;
+	public $project_config;
 
 	//初始化
 	public function __construct(){
 		
 		$this->_acl();
-
 		$this->config = include(WCP_ROOT.'/conf/config.php');
-		$this->project_config = include(WCP_ROOT.'/conf/project_config.php');
 
+		$userName = $this->getLoginName();
+		$acl_file = WCP_ROOT."/conf/acl/{$userName}.php";
+		if(!file_exists($acl_file)){
+			session_destroy();
+			$this->jump($this->buildUrl('index'));
+		}
 
+		$this->userinfo = include($acl_file);
+	
 		header('WCP_VERSION: '.self::VERSION);
 		header('WCP_AUTHOR: '.self::AUTHOR);
 		header('WCP_AUTHOR_EMAIL: '.self::AUTHOR_EMAIL);
+
+		if (!empty($_POST)){
+			foreach ($_POST as $key => $value) {
+				$_POST[$key] = trim($value);
+			}
+		}
+
+		if (!empty($_GET)){
+			foreach ($_GET as $key => $value) {
+				$_GET[$key] = trim($value);
+			}
+		}
 	}
 
 	//权限管理
@@ -104,7 +125,7 @@ class baseController{
 		$file = WCP_ROOT."/conf/acl/{$user}.php";
 		if (file_exists($file)){
 			$config = include($file);
-			if ($config['pwd'] == $passwod) {
+			if ($config['pwd'] == md5($passwod)) {
 
 				if ($config['type'] == 0 ) {
 					return true;

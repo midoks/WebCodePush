@@ -4,8 +4,24 @@ class mainController extends baseController{
 	//项目页
 	public function index(){
 		
-		$list = wcp_dir_list($this->config["work_dir"]);
-		$list = wcp_filter_list($list, $this->config['hidden_file']);
+		$list = array();
+		if(!empty($this->userinfo['project'])){
+			$repos = explode(',', trim($this->userinfo['project']));
+			
+			foreach ($repos as $repo) {
+				$repo_file = WCP_ROOT.'/conf/project/'.$repo.'.php';
+				if(file_exists($repo_file)){
+					$_info = include($repo_file);
+					$_info['project_name'] = $repo;
+					$list[] = $_info;
+				}
+			}
+
+		}
+
+		//var_dump($list);
+		//$list = wcp_dir_list($this->config["work_dir"]);
+		//$list = wcp_filter_list($list, $this->config['hidden_file']);
 		$this->list = $list;
 
 		$this->load('index');
@@ -14,22 +30,25 @@ class mainController extends baseController{
 	//文件页
 	public function _dir(){
 		//var_dump($_GET);
-		if(!isset($_GET['abspath'])){
+		if(!isset($_GET['project'])){
 			exit('参数有误');
 		}
 
-		$abspath = $_GET['abspath'];
+		$project = $_GET['project'];
 
-		if(!file_exists($abspath)){
-			exit('目录不存在');
+		$_info = array();
+		$project_file = WCP_ROOT.'/conf/project/'.$project.'.php';
+		if(file_exists($project_file)){
+			$_info = include($project_file);
+			$_info['project_name'] = $project;
+		} else {
+			exit('项目已经不存在');
 		}
 
-		$list = wcp_fileinfo_list($abspath);
+		$list = wcp_fileinfo_list($_info['project_source']);
 		$list = wcp_filter_list($list, $this->config['hidden_file']);
 
 		$this->list = $list;
-
-		//var_dump($this->list);
 		$this->load('dir');
 	}
 
