@@ -38,8 +38,7 @@
 
 function deleteRepo(url){
 
-	console.log(url);
-
+	// console.log(url);
 	var b = confirm('是否真的要删除本文件?');
 	if (b){
 		location.href = url;

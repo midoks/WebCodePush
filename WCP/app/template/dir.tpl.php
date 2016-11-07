@@ -37,8 +37,8 @@
 <?php
 
 	$_args = [];
-	if(isset($_GET['target'])){
-		$_args = array('target'  => $_GET['target']);
+	if(isset($_GET['project'])){
+		$_args = array('project'  => $_GET['project']);
 	}
 ?>
 <form id='main_upload' action="<?php echo($this->buildUrl('_copy', $_args)); ?>" method='POST'>
@@ -65,7 +65,7 @@ foreach($this->list as $k=>$v){
 	//选择
 	$str .= "<td style='text-align:center;'><input type='checkbox' name='checkbox{$k}' value='true' onfocus='return button_click('o');'></td>";
 
-	$dargs = array('abspath' => $v['abspath']);
+	$dargs = array('project' => $this->project_info['project_name'], 'fn'=>$v['fn']);
 	$args = array_merge($dargs, $_args);
 
 	//目录信息
@@ -89,10 +89,15 @@ foreach($this->list as $k=>$v){
 	//所属组
 	$str .=	"<td>{$v['info']['filegroup']}</td>";
 
+
 	//处理方法
 	$str .=	"<input type='hidden' name='file{$k}' value='{$v['abspath']}' />";
 	//处理方法
-	$str .=	"<td style='text-align:center;'><input type='submit' name='single{$k}' value='>' onfocus='return button_click('o');'/></td>";
+	$str .=	"<td style='text-align:center;'>";
+	$str .=	"<input title='复制文件命令' type='submit' name='single{$k}' value='>' onfocus=return button_click('o') />&nbsp;";
+	$str .=	"<input title='删除文件命令' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
+	$str .=	"</td>";
+
 	
 	$str .= "</tr>";
 	echo $str;

@@ -20,7 +20,7 @@ function wcp_add_project(array $info){
 	$content = '<?php '."\r\n".'return array('."\r\n";
 
 	$content .= "\t".'"project_site"=>"'.$info['project_site'].'"'.",\r\n";
-	$content .= "\t".'"project_type"=>"'.$info['project_type'].'"'.",\r\n";
+	$content .= "\t".'"project_cmd"=>'."'".$info['project_cmd']."'".",\r\n";
 	$content .= "\t".'"project_source"=>"'.$info['project_source'].'"'.",\r\n";
 	$content .= "\t".'"project_target"=>"'.$info['project_target'].'"'.",\r\n";
 	$content .= "\t".'"project_desc"=>"'.$info['project_desc'].'"'."\r\n";

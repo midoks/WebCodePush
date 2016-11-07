@@ -81,20 +81,21 @@ if (isset($this->error)){
 </td><tr>
 
 <tr class='list'><td style="text-align: left;">
-	权限:<select name='project_type'>
-	<option value='0' selected="selected">同步</option>
-	<option value='1'>命令</option>
-	</select>
-	<span style="color: red;">0.同步数据;1.执行命令</span>
-</td><tr>
-
-<tr class='list'><td style="text-align: left;">
 	目标地址命令:<textarea rows="20" cols="100" name="project_target"><?php 
 	if(isset($this->project_info['project_target'])){
 		echo $this->project_info['project_target'];
 	}
 ?></textarea>
 	<span style='color:red;'>多个地址,用换行或(,)逗号</span>
+</td><tr>
+
+<tr class='list'><td style="text-align: left;">
+	目标地址命令:<textarea rows="20" cols="100" name="project_cmd"><?php
+	if(isset($this->project_info['project_cmd'])){
+		echo $this->project_info['project_cmd'];
+	}
+?></textarea>
+	<span style='color:red;'>多个命令,用换行或(,)逗号</span>
 </td><tr>
 
 <tr class='list'><td style="text-align: left;">
