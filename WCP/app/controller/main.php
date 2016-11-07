@@ -38,16 +38,24 @@ class mainController extends baseController{
 
 		$_info = array();
 		$project_file = WCP_ROOT.'/conf/project/'.$project.'.php';
+
 		if(file_exists($project_file)){
 			$_info = include($project_file);
 			$_info['project_name'] = $project;
 		} else {
 			exit('项目已经不存在');
 		}
-		$this->project_info = $_info;
 
-		$list = wcp_fileinfo_list($_info['project_source']);
+		$this->project_info = $_info;
+		$project_dir = $_info['project_source'];
+		if (isset($_GET['abspath']) && file_exists($_GET['abspath'])){
+			$project_dir = $_GET['abspath'];
+		}
+
+		$list = wcp_fileinfo_list($project_dir);
 		$list = wcp_filter_list($list, $this->config['hidden_file']);
+		
+		//var_dump($list);exit;
 
 		$this->list = $list;
 		$this->load('dir');
@@ -88,112 +96,43 @@ class mainController extends baseController{
 			exit('项目已经不存在');
 		}
 		
+		$local_project_dir 	= $_info['project_source'];
+		$target_addr		= $_info['project_target'];
 
+		var_dump($_POST);
+		
+	}
 
-		$target_addr = $_info['project_target'];
-
-		var_dump($_list);
-		var_dump($_info);
-
-		var_dump($target_addr);
-		$local_project_dir = $this->config['work_dir'].'/'.$target.'/';
-
-
-
+	private function wcp_add(){
 
 		$loginName = $this->getLoginName();
-		$error_log = WCP_ROOT."/logs/".$loginName."_error_log.log";
-		
+		$op_log = WCP_ROOT."/logs/".$loginName."_op.log";
 		
 		foreach ($_list as $key => $value) {
 
-			$relative_position_dir = str_replace($local_project_dir, '', $value);
-			$t_addr = $target_addr;
-
-			var_dump($value,$t_addr,$relative_position_dir);
-			//exit;
+			$relative_position_dir 	= str_replace($local_project_dir, '', $value);
+			$relative_position_dir 	= trim($relative_position_dir, '/');
+			$target_addr 			= trim($target_addr, '/');
+			$target_service_addr = $target_addr.'/'.$relative_position_dir;
 
 			//echo "rsync -avz {$value} {$t_addr}\r\n";
-			exec("rsync -ravz {$value} {$t_addr} 2>>{$error_log}", $ret, $status );
+			$config = '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
+			exec("rsync -ravz {$config} {$value} {$target_service_addr} 2>>{$op_log}", $ret, $status );
 
 			foreach ($ret as $rk => $rv) {
 				echo $rv."<br>";
 			}
 			if ($status > 0 ){
-				echo "<span style='color:red;'>rsync -avz {$value} {$t_addr} FAIL</span><br>";
+				echo "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
 			} else {
-				echo "<span style='color:blue;'>rsync -avz {$value} {$t_addr} SUCCESS</span><br>";
+				echo "<span style='color:blue;'>rsync -avz {$value} {$target_service_addr} SUCCESS</span><br>";
 			}
-			
 		}
 	}
 
 	//项目同步
-	public function _delete(){
+	public function wcp_delete(){
 
-		if (empty($_POST)){
-			exit('error request!!!');
-		}
-
-		if(!isset($_GET['project'])){
-			exit("error request!!!\r\nwhy not set var target!!!");
-		}
-
-		$file = wcp_list_filter_prefex($_POST, 'file');
-		$_list = array();
-		if (isset($_POST['submit'])){
-			$get_list = wcp_list_filter_prefex($_POST, 'checkbox');	
-		} else {
-			$get_list = wcp_list_filter_prefex($_POST, 'single');
-		}
-
-		$get_list_key = array_keys($get_list);
-		foreach ($get_list_key as $k) {
-			$_list[] = $file[$k];
-		}
-
-
-		$project = $_GET['project'];
-		$_info = array();
-		$project_file = WCP_ROOT.'/conf/project/'.$project.'.php';
-		if(file_exists($project_file)){
-			$_info = include($project_file);
-			$_info['project_name'] = $project;
-		} else {
-			exit('项目已经不存在');
-		}
-		
-
-
-		$target_addr = $_info['project_target'];
-
-		$local_project_dir = $this->config['work_dir'].'/'.$target.'/';
-
-		$loginName = $this->getLoginName();
-		$error_log = WCP_ROOT."/logs/".$loginName."_error_log.log";
-		
-		
-		foreach ($_list as $key => $value) {
-
-			$relative_position_dir = str_replace($local_project_dir, '', $value);
-			$t_addr = $target_addr;
-
-			var_dump($value,$t_addr,$relative_position_dir);
-			//exit;
-
-			//echo "rsync -avz {$value} {$t_addr}\r\n";
-			exec("rsync -ravz --delete {$value} {$t_addr} 2>>{$error_log}", $ret, $status );
-
-			foreach ($ret as $rk => $rv) {
-				echo $rv."<br>";
-			}
-			if ($status > 0 ){
-				echo "<span style='color:red;'>rsync -avz --delete {$value} {$t_addr} FAIL</span><br>";
-			} else {
-				echo "<span style='color:blue;'>rsync -avz --delete {$value} {$t_addr} SUCCESS</span><br>";
-			}
-			
-		}
 	}
 	
 }

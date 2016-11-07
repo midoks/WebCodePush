@@ -65,7 +65,8 @@ foreach($this->list as $k=>$v){
 	//选择
 	$str .= "<td style='text-align:center;'><input type='checkbox' name='checkbox{$k}' value='true' onfocus='return button_click('o');'></td>";
 
-	$dargs = array('project' => $this->project_info['project_name'], 'fn'=>$v['fn']);
+	$dargs = array('project' => $this->project_info['project_name'],
+				   'abspath' => $v['abspath']);
 	$args = array_merge($dargs, $_args);
 
 	//目录信息

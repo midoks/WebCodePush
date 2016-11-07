@@ -195,8 +195,19 @@ class baseController{
 	public function buildUrl($_m ,$args = array(), $_c = 'main'){
 		
 		if (!empty($args)){
-			$args = http_build_query($args);
-			$url = "/index.php?_c={$_c}&_m={$_m}&{$args}";
+			//$args = http_build_query($args);
+			$tmp = '';
+			foreach ($args as $k => $v) {
+				if ( $k == 'abspath' ){
+					$tmp .= $k.'='.$v.'&';
+				} else {
+					$tmp .= $k.'='.urlencode($v).'&';
+				}
+			}
+
+			$tmp = trim($tmp, '&');
+			$url = "/index.php?_c={$_c}&_m={$_m}&{$tmp}";
+			
 			return $url;
 		}
 		$url = "/index.php?_c={$_c}&_m={$_m}";
