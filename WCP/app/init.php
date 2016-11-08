@@ -1,5 +1,5 @@
 <?php 
-
+set_time_limit(0);
 define("WCP_APP_DIR", 'app');
 define('WCP_ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))));
 define('WCP_CORE', WCP_ROOT.'/'.WCP_APP_DIR.'/core');

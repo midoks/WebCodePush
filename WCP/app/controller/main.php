@@ -63,7 +63,6 @@ class mainController extends baseController{
 
 	//项目同步
 	public function _copy(){
-		set_time_limit(0);
 
 		if (empty($_POST)){
 			exit('error request!!!');
