@@ -35,6 +35,11 @@ class sysController extends baseController{
 			$list[] = $_tmp;
 		}
 
+		foreach ($list as $key => $value) {
+			$t = $list[$key]['project_target'];
+			$list[$key]['project_target'] = str_replace(',', "\r\n", $t);
+		}
+
 		$this->list = $list;
 		$this->title = "项目管理";
 		$this->load('project');
@@ -88,6 +93,8 @@ class sysController extends baseController{
 			if(file_exists($repo)){
 				$project_info = include($repo);
 				$project_info['project_name'] = $_GET['project'];
+				$project_info['project_target'] = str_replace(',', "\r\n", $project_info['project_target']);
+
 				$this->project_info = $project_info;
 			} else {
 				$this->jump($this->buildUrl('project', '', 'sys'));

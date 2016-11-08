@@ -63,6 +63,7 @@ class mainController extends baseController{
 
 	//项目同步
 	public function _copy(){
+		set_time_limit(0);
 
 		if (empty($_POST)){
 			exit('error request!!!');
@@ -84,6 +85,8 @@ class mainController extends baseController{
 		foreach ($get_list_key as $k) {
 			$_list[] = $file[$k];
 		}
+		$get_list_value = array_values($get_list);
+		
 
 
 		$project = $_GET['project'];
@@ -97,42 +100,84 @@ class mainController extends baseController{
 		}
 		
 		$local_project_dir 	= $_info['project_source'];
-		$target_addr		= $_info['project_target'];
-
-		var_dump($_POST);
-		
-	}
-
-	private function wcp_add(){
-
+		$target_addrs		= $_info['project_target'];
 		$loginName = $this->getLoginName();
 		$op_log = WCP_ROOT."/logs/".$loginName."_op.log";
-		
-		foreach ($_list as $key => $value) {
 
-			$relative_position_dir 	= str_replace($local_project_dir, '', $value);
-			$relative_position_dir 	= trim($relative_position_dir, '/');
-			$target_addr 			= trim($target_addr, '/');
-			$target_service_addr = $target_addr.'/'.$relative_position_dir;
+		//var_dump($_list);exit;
 
-			//echo "rsync -avz {$value} {$t_addr}\r\n";
-			$config = '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
-			exec("rsync -ravz {$config} {$value} {$target_service_addr} 2>>{$op_log}", $ret, $status );
+		$target_addrs = explode(',', $target_addrs);
+		//var_dump($target_addrs);exit;
 
-			foreach ($ret as $rk => $rv) {
-				echo $rv."<br>";
-			}
-			if ($status > 0 ){
-				echo "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
+		$rsync_info = '';
+		foreach($target_addrs as $target_addr){
+
+			if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){
+
+				foreach ($_list as $key => $value) {
+					$relative_position_dir 	= str_replace($local_project_dir, '', $value);
+					$relative_position_dir 	= trim($relative_position_dir, '/');
+					$target_addr 			= trim($target_addr, '/');
+					$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
+
+					#if (is_dir($value)){
+						$target_service_addr = dirname($target_service_addr).'/';
+						$value = dirname($value).'/';
+					#}
+
+					//var_dump($value, $target_service_addr);exit;
+
+					$config = "--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*";
+					$cmd ="rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
+					exec($cmd, $ret, $status);
+					#$rsync_info .= $cmd."<br>";
+
+					foreach ($ret as $rk => $rv) {
+						$rsync_info .= $rv."<br>";
+					}
+					$rsync_info .=  "<br>";
+
+					if ($status > 0 ){
+						$rsync_info .= "<span style='color:red;'>rsync -avz --delete {$target_service_addr} {$value} FAIL</span><br>";
+					} else {
+						$rsync_info .= "<span style='color:blue;'>rsync -avz --delete {$target_service_addr} {$value}  SUCCESS</span><br>";
+					}
+				}
 			} else {
-				echo "<span style='color:blue;'>rsync -avz {$value} {$target_service_addr} SUCCESS</span><br>";
+
+				foreach ($_list as $key => $value) {
+					$relative_position_dir 	= str_replace($local_project_dir, '', $value);
+					$relative_position_dir 	= trim($relative_position_dir, '/');
+					$target_addr 			= trim($target_addr, '/');
+					$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
+
+					if (is_dir($value)){
+						$target_service_addr = dirname($target_service_addr);
+					}
+
+					//echo "rsync -avz {$value} {$t_addr}\r\n";
+					$config = '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
+					// $config = '';
+					exec("rsync -ravz {$config} {$value} {$target_service_addr} 2>>{$op_log}", $ret, $status );
+
+					foreach ($ret as $rk => $rv) {
+						$rsync_info .=  $rv."<br>";
+					}
+					$rsync_info .=  "<br>";
+
+					if ($status > 0 ){
+						$rsync_info .= "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
+					} else {
+						$rsync_info .= "<span style='color:blue;'>rsync -avz {$value} {$target_service_addr} SUCCESS</span><br>";
+					}
+				}
 			}
 		}
-	}
 
-	//项目同步
-	public function wcp_delete(){
+		
 
+		$this->rsync_info = $rsync_info;
+		$this->load('copy');
 	}
 	
 }

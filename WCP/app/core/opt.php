@@ -17,6 +17,17 @@ function wcp_add_user(array $info){
 
 function wcp_add_project(array $info){
 
+	$tmp_project_target = trim($info['project_target']);
+	$tmp_project_target = explode("\r", $tmp_project_target);
+	foreach ($tmp_project_target as $key => $value) {
+		$t = trim($tmp_project_target[$key]);
+		if (!empty($t)){
+			$tmp_project_target[$key] = trim($t, ',');
+		}
+	}
+	
+	$info['project_target'] = implode(',', $tmp_project_target);
+
 	$content = '<?php '."\r\n".'return array('."\r\n";
 
 	$content .= "\t".'"project_site"=>"'.$info['project_site'].'"'.",\r\n";

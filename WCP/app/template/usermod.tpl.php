@@ -77,7 +77,13 @@ if (isset($this->error)){
 	?>>观察者</option>
 </select></td><tr>
 
-<tr class='list'><td style="text-align: left;">项目:<textarea rows="15" cols="100" name="project"><?php echo $this->userinfo['project']; ?></textarea></td><tr>
+<tr class='list'>
+	<td style="text-align: left;">
+	项目:<textarea rows="15" cols="100" name="project"><?php echo $this->userinfo['project']; ?></textarea>
+	添加项目,逗号(,)分割
+	</td>
+<tr>
+
 <tr class='list'><td style="text-align: left;"><input type="submit" name="submit" value="提交"></td><tr>
 
 </form>
