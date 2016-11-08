@@ -37,7 +37,7 @@ class sysController extends baseController{
 
 		foreach ($list as $key => $value) {
 			$t = $list[$key]['project_target'];
-			$list[$key]['project_target'] = str_replace(',', "\r\n", $t);
+			$list[$key]['project_target'] = str_replace(',', "<br/>", $t);
 		}
 
 		$this->list = $list;

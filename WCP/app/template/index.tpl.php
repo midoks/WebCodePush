@@ -52,7 +52,7 @@ function button_click(url){
 	if ($this->userinfo['type'] == 0){
 ?>
 	<tr>
-		<th colspan="4" style="text-align: center;font-size:16px;font-weight: bold;">
+		<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">
 			<a style="text-decoration: none;" href='<?php echo $url = $this->buildUrl('index', '', 'sys'); ?>'>系统设置</a>
 		</th>
 	<tr>
@@ -61,13 +61,13 @@ function button_click(url){
 ?>
 
 	<tr>
-		<th colspan="4" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
+		<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
 	<tr>
 	<tr>
 		<th style="text-align:center">项目名</th>
 		<th style="text-align:center">项目说明</th>
 		<th style="text-align:center">站点名</th>
-		<th style="text-align:center">命令</th>
+		<!-- <th style="text-align:center">命令</th> -->
 	<tr>
 
 <?php
@@ -95,13 +95,13 @@ if (!empty($this->list)){
 			$str .=	"<td style='width:20%;'>暂无</td>";
 		}
 
-		//命令
-		if (!empty($v['project_cmd'])) {
-			$url = $this->buildUrl('_cmd', array('project'  => $v['project_name']));
-			$str .=	"<td style='width:20%;'><input title='执行命令' type='button' value='S' onclick=javaScript:button_click('{$url}') /></td>";
-		} else {
-			$str .=	"<td style='width:20%;'>暂无</td>";
-		}
+		// //命令
+		// if (!empty($v['project_cmd'])) {
+		// 	$url = $this->buildUrl('_cmd', array('project'  => $v['project_name']));
+		// 	$str .=	"<td style='width:20%;'><input title='执行命令' type='button' value='S' onclick=javaScript:button_click('{$url}') /></td>";
+		// } else {
+		// 	$str .=	"<td style='width:20%;'>暂无</td>";
+		// }
 		
 		$str .= "</tr>";
 		echo $str;
