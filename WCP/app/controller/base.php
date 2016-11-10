@@ -130,9 +130,8 @@ class baseController{
 				if ($config['type'] == 0 ) {
 					return true;
 				} else if ($config['type'] == 1) {
-
 					if (isset($_GET['abspath']) ){
-						$acl_list_repo = explode('|', $config['acl']);
+						$acl_list_repo = explode(',', $config['project']);
 						$repo_name = $this->getRepoName();
 						if (in_array($repo_name, $acl_list_repo)){
 							return true;
@@ -149,12 +148,7 @@ class baseController{
 	}
 
 	public function getRepoName(){
-		$abspath = isset($_GET['abspath']) ? $_GET['abspath'] : '';
-		$_tmp = str_replace($this->config['work_dir'], '', $abspath);	
-		$_tmp = trim($_tmp, '/');
-
-		$_f_list = explode('/', $_tmp);
-		return $_f_list[0];
+		return $_GET['project'];
 	}
 
 	public function safeEcho($var){
