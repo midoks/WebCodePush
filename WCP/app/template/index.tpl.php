@@ -61,6 +61,22 @@ function button_click(url){
 ?>
 
 	<tr>
+		<th colspan="3" style="text-align: left;font-size:12px;">
+		注意事项<br />
+	  	rsync同步的排除规则：<br />
+	  	--exclude=*svn* --exclude=*.log* --exclude=*conf*<br/>
+	 	2 请将类似下面的rsync同步命令发给管理员来操作 <br>
+	  	<span style="color:red;">rsync -avz  /var/www/application/test.php rsync://127.0.0.1/application/ </span><br/>
+	 	3 同步文件的时候，不出错的时候都会看到下面这些语句：<br /> 
+	  	<!-- At revision 10155. <br> -->
+	  	building file list ... done test.php sent 191 bytes received 38 bytes 458.00 bytes/sec total size is 119 speedup is 0.52<br/> 
+	  	<span style="color:blue;"> rsync -avz /var/www/application/test.php rsync://127.0.0.1/application/ done </span><br/>
+	  	4 申请代码上线，只需要把需要上线文件copy出来，文件的绝对路径可以从语句中获取到，如下： <br>
+	  	/var/www/application/test.php </br>
+		</th>
+	</tr>
+
+	<tr>
 		<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
 	<tr>
 	<tr>
