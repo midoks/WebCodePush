@@ -109,6 +109,8 @@ class mainController extends baseController{
 		//var_dump($target_addrs);exit;
 
 		$rsync_info = '';
+		include(ABSPATH.'/app/core/cp_op.php');
+
 		foreach($target_addrs as $target_addr){
 
 			if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){
