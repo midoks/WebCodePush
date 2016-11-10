@@ -129,6 +129,7 @@ class mainController extends baseController{
 					$config = "--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*";
 					$cmd ="rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
 					passthru($cmd, $ret, $status);
+					//exec($cmd, $ret, $status);
 					#$rsync_info .= $cmd."<br>";
 
 					foreach ($ret as $rk => $rv) {
@@ -157,12 +158,13 @@ class mainController extends baseController{
 					//echo "rsync -avz {$value} {$t_addr}\r\n";
 					$config = '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
 					// $config = '';
-					passthru("rsync -ravz {$config} {$value} {$target_service_addr} 2>>{$op_log}", $ret, $status );
-
+					$cmd = "rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
+					//$exe_string = passthru($cmd, $ret);
+					exec($cmd, $ret, $status);
 					foreach ($ret as $rk => $rv) {
 						$rsync_info .=  $rv."<br>";
 					}
-					$rsync_info .=  "<br>";
+		
 
 					if ($status > 0 ){
 						$rsync_info .= "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
