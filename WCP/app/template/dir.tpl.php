@@ -36,7 +36,7 @@
 </style>
 <?php
 
-	$_args = [];
+	$_args = array();
 	if(isset($_GET['project'])){
 		$_args = array('project'  => $_GET['project']);
 	}
@@ -72,7 +72,7 @@ foreach($this->list as $k=>$v){
 	//目录信息
 	$url = $this->buildUrl('_dir', $args);
 	//var_dump($url);
-	$args = [];
+	$args = array();
 	if($v['type']=='dir'){
 		$str .=	"<td>"."<img src='resoures/image/dir.gif' alt='folder'>[<a href='{$url}' style='text-decoration: none;'>{$v['fn']}</a>]</td>";
 	} else {

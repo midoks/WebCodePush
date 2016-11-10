@@ -35,7 +35,7 @@
 </style>
 <?php
 
-	$_args = [];
+	$_args = array();
 	if(isset($_GET['project'])){
 		$_args = array('project'  => $_GET['project']);
 	}
