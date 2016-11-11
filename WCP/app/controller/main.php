@@ -147,7 +147,7 @@ class mainController extends baseController{
 					}
 					$rsync_info .=  "<br>";
 
-					if ($status > 0 ){
+					if ($status != 0 ){
 						$rsync_info .= "<span style='color:red;'>rsync -avz --delete {$target_service_addr} {$value} FAIL</span><br>";
 						$this->rycLog($op_log, "rsync -avz --delete {$target_service_addr} {$value} FAIL");
 					} else {
@@ -178,7 +178,7 @@ class mainController extends baseController{
 					}
 		
 
-					if ($status > 0 ){
+					if ($status != 0 ){
 						$rsync_info .= "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
 						$this->rycLog($op_log, "rsync -avz {$target_service_addr} {$value} FAIL");
 					} else {
