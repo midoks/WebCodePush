@@ -154,8 +154,8 @@ function GetUsernameFromUid($uid){
 } 
 
 function GetUsernameFromGid($gid){
-	if (function_exists('posix_getpwuid')) { 
-		$a = posix_getpwuid($gid); 
+	if (function_exists('posix_getgrgid')) { 
+		$a = posix_getgrgid($gid); 
 		return $a['name']; 
 	}
 	return $gid;
