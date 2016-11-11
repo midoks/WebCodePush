@@ -1,48 +1,42 @@
 <?php  
-class userController{
+class userController extends baseController{
 
 	//退出登陆
 	public function logout(){
-		session_start();
-		session_destroy();
-
 		if ( PHP_SAPI == 'apache2handler'){
 			header('HTTP/1.0 401 Unauthorized');
     		exit("You are unauthorized to enter this area.");
 		} else if (strpos(PHP_SAPI, 'fpm') !== false ){
+			session_destroy();
 			$url = $this->buildUrl('index', '');
-			header("Location: ".$url);
+			$this->jump($url);
 		}
 	}
 
-	/**
-	 * 组装url
-	 */
-	public function buildUrl($_m ,$args = array(), $_c = 'main'){
-		
-		if (!empty($args)){
-			//$args = http_build_query($args);
-			$tmp = '';
-			foreach ($args as $k => $v) {
-				if ( $k == 'abspath' ){
-					$tmp .= $k.'='.$v.'&';
-				} else {
-					$tmp .= $k.'='.urlencode($v).'&';
-				}
+	//修改密码
+	public function modpwd(){
+
+		if (isset($_POST['submit'])) {
+
+			$pwd = $_POST['pwd'];
+			if(empty($pwd)){
+				$this->error = '密码不能空';
 			}
 
-			$tmp = trim($tmp, '&');
-			$url = "/index.php?_c={$_c}&_m={$_m}&{$tmp}";
-			
-			return $url;
+			$this->userinfo['pwd'] = md5($pwd);
+
+			$content = wcp_add_user($this->userinfo);
+			$user_file = WCP_ROOT.'/conf/acl/'.$this->userinfo['username'].'.php';
+			$ret = file_put_contents($user_file, $content);
+			if($ret){
+				$this->jump($this->buildUrl('index', ''));
+			} else {
+				$this->error = '设置失败';
+			}
 		}
-		$url = "/index.php?_c={$_c}&_m={$_m}";
-		return $url;
-	}
 
-
-	public function jump($url){
-		
+		$this->title = '修改密码';
+		$this->load('userselfmod');
 	}
 	
 }

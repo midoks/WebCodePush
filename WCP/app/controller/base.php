@@ -16,14 +16,15 @@ class baseController{
 		$this->_acl();
 		$this->config = include(WCP_ROOT.'/conf/config.php');
 
-		$userName = $this->getLoginName();
-		$acl_file = WCP_ROOT."/conf/acl/{$userName}.php";
+		$username = $this->getLoginName();
+		$acl_file = WCP_ROOT."/conf/acl/{$username}.php";
 		if(!file_exists($acl_file)){
 			session_destroy();
 			$this->jump($this->buildUrl('index'));
 		}
 
 		$this->userinfo = include($acl_file);
+		$this->userinfo['username'] = $username;
 	
 		header('WCP_VERSION: '.self::VERSION);
 		header('WCP_AUTHOR: '.self::AUTHOR);
@@ -206,6 +207,14 @@ class baseController{
 		}
 		$url = "/index.php?_c={$_c}&_m={$_m}";
 		return $url;
+	}
+
+	//记录同步的日
+	public function rycLog($file, $content){
+		$fp = fopen($file, 'ab');
+		fwrite($fp, '['.date('H:i:s').']:'."\t".$content."\n");
+		fclose($fp);
+
 	}
 
 	public function jump($url){

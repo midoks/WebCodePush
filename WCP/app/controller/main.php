@@ -101,7 +101,7 @@ class mainController extends baseController{
 		$local_project_dir 	= $_info['project_source'];
 		$target_addrs		= $_info['project_target'];
 		$loginName = $this->getLoginName();
-		$op_log = WCP_ROOT."/logs/".$loginName."_op.log";
+		$op_log = WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
 
 		//var_dump($_list);exit;
 
@@ -141,8 +141,10 @@ class mainController extends baseController{
 
 					if ($status > 0 ){
 						$rsync_info .= "<span style='color:red;'>rsync -avz --delete {$target_service_addr} {$value} FAIL</span><br>";
+						$this->rycLog($op_log, "rsync -avz --delete {$target_service_addr} {$value} FAIL");
 					} else {
 						$rsync_info .= "<span style='color:blue;'>rsync -avz --delete {$target_service_addr} {$value}  SUCCESS</span><br>";
+						$this->rycLog($op_log, "rsync -avz --delete {$target_service_addr} {$value} SUCCESS");
 					}
 				}
 			} else {
@@ -170,8 +172,10 @@ class mainController extends baseController{
 
 					if ($status > 0 ){
 						$rsync_info .= "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
+						$this->rycLog($op_log, "rsync -avz {$target_service_addr} {$value} FAIL");
 					} else {
 						$rsync_info .= "<span style='color:blue;'>rsync -avz {$value} {$target_service_addr} SUCCESS</span><br>";
+						$this->rycLog($op_log, "rsync -avz {$target_service_addr} {$value} SUCCESS");
 					}
 				}
 			}
