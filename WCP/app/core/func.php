@@ -53,14 +53,14 @@ function wcp_fileinfo_list($dir){
 				}
 
 				$arr['abspath'] = rtrim($dir,'/').'/'.$v;
-				$arr['info'] = stat($arr['abspath']);
+				$arr['info'] = lstat($arr['abspath']);
 
 				//var_dump($arr);exit;
 
 				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
 				$arr['info']['size'] = GetFileSize(filesize($arr['abspath']));
 
-				$arr['info']['filegroup'] = filegroup($arr['abspath']);
+				$arr['info']['filegroup'] = GetUsernameFromGid(filegroup($arr['abspath']));
 				//$arr['info']['fileowner'] =  GetUsernameFromUid( fileowner($arr['abspath']) );
 				$arr['info']['fileowner'] =  GetUsernameFromUid( $arr['info']['uid'] );
 				//$arr['info']['fileperms'] = GetFileperms(fileperms($arr['abspath']));
@@ -151,6 +151,14 @@ function GetUsernameFromUid($uid){
 	} else {
 		return $uid;
 	}
+} 
+
+function GetUsernameFromGid($gid){
+	if (function_exists('posix_getpwuid')) { 
+		$a = posix_getpwuid($uid); 
+		return $a['name']; 
+	}
+	return $gid;
 } 
 
 function GetFileperms($perms){

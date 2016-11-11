@@ -51,8 +51,10 @@ class mainController extends baseController{
 		if (isset($_GET['abspath']) && file_exists($_GET['abspath'])){
 			$project_dir = $_GET['abspath'];
 
-			if (substr($project_dir, 0, strlen($_info['project_source'])) != $_info['project_source']){
-				$this->jump($this->buildUrl('index', ''));
+			if ($this->userinfo['type'] !=0 ){//检查权限
+				if (substr($project_dir, 0, strlen($_info['project_source'])) != $_info['project_source']){
+					$this->jump($this->buildUrl('index', ''));
+				}
 			}
 		}
 
@@ -107,7 +109,9 @@ class mainController extends baseController{
 		$loginName = $this->getLoginName();
 		$op_log = WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
 
-		//var_dump($_list);exit;
+		if(empty($target_addrs)){
+			exit("项目未设置完整!!!");
+		}
 
 		$target_addrs = explode(',', $target_addrs);
 		//var_dump($target_addrs);exit;

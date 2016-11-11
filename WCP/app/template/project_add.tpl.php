@@ -86,7 +86,8 @@ if (isset($this->error)){
 		echo $this->project_info['project_target'];
 	}
 ?></textarea>
-	<span style='color:red;'>多个地址,用换行或(,)逗号</span>
+	<span style='color:red;'>多个地址,用换行或(,)逗号 <br/>
+	例子:rsync://127.0.0.1/application/</span>
 </td><tr>
 
 <tr class='list'><td style="text-align: left;">
