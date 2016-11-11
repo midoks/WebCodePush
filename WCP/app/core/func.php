@@ -60,7 +60,7 @@ function wcp_fileinfo_list($dir){
 				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
 				$arr['info']['size'] = GetFileSize(filesize($arr['abspath']));
 
-				$arr['info']['filegroup'] = GetUsernameFromGid(filegroup($arr['abspath']));
+				$arr['info']['filegroup'] = GetUsernameFromGid($arr['info']['gid'] );
 				//$arr['info']['fileowner'] =  GetUsernameFromUid( fileowner($arr['abspath']) );
 				$arr['info']['fileowner'] =  GetUsernameFromUid( $arr['info']['uid'] );
 				//$arr['info']['fileperms'] = GetFileperms(fileperms($arr['abspath']));
@@ -155,7 +155,7 @@ function GetUsernameFromUid($uid){
 
 function GetUsernameFromGid($gid){
 	if (function_exists('posix_getpwuid')) { 
-		$a = posix_getpwuid($uid); 
+		$a = posix_getpwuid($gid); 
 		return $a['name']; 
 	}
 	return $gid;
