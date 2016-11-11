@@ -55,6 +55,8 @@ function wcp_fileinfo_list($dir){
 				$arr['abspath'] = rtrim($dir,'/').'/'.$v;
 				$arr['info'] = stat($arr['abspath']);
 
+				//var_dump($arr);exit;
+
 				$arr['info']['mtime'] = date('Y-m-d H:i:s', $arr['info']['mtime']);
 				$arr['info']['size'] = GetFileSize(filesize($arr['abspath']));
 
@@ -71,6 +73,8 @@ function wcp_fileinfo_list($dir){
 	return $list;
 }
 
+
+
 /**
  * 过滤文件名
  * @param array $list 需要过滤的文件列表
@@ -84,6 +88,24 @@ function wcp_filter_list($list, $filter_list){
 		}
 	}
 	return $_list;
+}
+
+function wcp_file_sort($list){
+
+	$list_file 	= array();
+	$list_dir 	= array();
+
+	foreach ($list as $key => $value) {
+		if($value['type'] == 'file'){
+			$list_file[] = $value;
+		} else {
+			$list_dir[] = $value;
+		}
+	}
+
+	$list = array_merge($list_dir, $list_file);
+	//var_dump($list_file,$list_dir);exit;
+	return $list;
 }
 
 /**
@@ -120,7 +142,7 @@ function GetUsernameFromUid($uid){
 	} 
 	# This works on BSD but not with GNU 
 	elseif (strstr(php_uname('s'), 'BSD')) { 
-		exec('id -u ' . (int) $uid, $o, $r); 
+		exec('id -u ' . (int) $uid, $o, $r);
 		if ($r == 0) {
 		  return trim($o['0']);
 		} else {

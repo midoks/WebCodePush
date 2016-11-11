@@ -50,13 +50,17 @@ class mainController extends baseController{
 		$project_dir = $_info['project_source'];
 		if (isset($_GET['abspath']) && file_exists($_GET['abspath'])){
 			$project_dir = $_GET['abspath'];
+
+			if (substr($project_dir, 0, strlen($_info['project_source'])) != $_info['project_source']){
+				$this->jump($this->buildUrl('index', ''));
+			}
 		}
 
 		$list = wcp_fileinfo_list($project_dir);
 		$list = wcp_filter_list($list, $this->config['hidden_file']);
+		$list = wcp_file_sort($list);
 		
 		//var_dump($list);exit;
-
 		$this->list = $list;
 		$this->load('dir');
 	}
@@ -130,8 +134,8 @@ class mainController extends baseController{
 
 					$config = "--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*";
 					$cmd ="rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
-					passthru($cmd, $ret, $status);
-					//exec($cmd, $ret, $status);
+					//passthru($cmd, $ret);
+					exec($cmd, $ret, $status);
 					#$rsync_info .= $cmd."<br>";
 
 					foreach ($ret as $rk => $rv) {
