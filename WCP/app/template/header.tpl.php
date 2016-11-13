@@ -17,6 +17,7 @@
 	padding:0px;
 	font: small sans-serif;
 	font-size:12px;
+	outline:none;
 }
 
 a{
