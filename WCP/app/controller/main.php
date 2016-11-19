@@ -1,6 +1,9 @@
 <?php  
 class mainController extends baseController{
 
+	public $rsync_config 	= '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
+	public $rsyncd_config 	= '--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*';
+
 	//项目页
 	public function index(){
 		
@@ -93,106 +96,125 @@ class mainController extends baseController{
 		$get_list_value = array_values($get_list);
 		
 
-
 		$project = $_GET['project'];
-		$_info = array();
-		$project_file = WCP_ROOT.'/conf/project/'.$project.'.php';
+		$rsync_info = '';
+		include(ABSPATH.'/app/core/cp_op.php');
+
+		if(isset($get_list_value[0]) && $get_list_value[0] == 'S'){ //查看源码
+			$file_ex = explode('.', $_list[0]);
+			$file_type = $file_ex[count($file_ex) - 1];
+			//var_dump($file_type);
+			$source_code = file_get_contents($_list[0]);
+			if(in_array($file_type, array('php','css','js','htaccess', 'txt','sql', 'shtml', 'html','sh'))){
+				$source_code = htmlentities($source_code);
+				$source_code = str_replace("\n", '<br>', $source_code);
+			}
+			echo($source_code);exit;
+		} else if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){ //删除项目不存在的文件 && 同步项目
+			$rsync_info .= $this->rsync_file($project, $_list, 'delete');
+		} else {
+			$rsync_info .= $this->rsync_file($project, $_list, 'add'); //同步项目
+		}
+		
+		$this->rsync_info = $rsync_info;
+		$this->load('copy');
+	}
+
+	//同步文件
+	/**
+	 * rsync同步操作
+	 * @param $project_name 项目名
+	 * @param $_list 同步列表
+	 * @param $type add|delete
+	 * @param $rsync_return 是否返回同步信息
+	 */
+	private function rsync_file($project_name, $_list, $type='add', $rsync_return = true){
+		$_info 			= array();
+
+		$project_file 	= WCP_ROOT.'/conf/project/'.$project_name.'.php';
 		if(file_exists($project_file)){
-			$_info = include($project_file);
-			$_info['project_name'] = $project;
+			$_info 					= include($project_file);
+			$_info['project_name'] 	= $project_name;
+
+			if(!file_exists($_info['project_source'])){
+				exit('代码目录不存在!!!');
+			}
+
+
 		} else {
 			exit('项目已经不存在');
 		}
 		
 		$local_project_dir 	= $_info['project_source'];
 		$target_addrs		= $_info['project_target'];
-		$loginName = $this->getLoginName();
-		$op_log = WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
+		$target_addrs 		= explode(',', $target_addrs);
 
-		if(empty($target_addrs)){
-			exit("项目未设置完整!!!");
-		}
-
-		$target_addrs = explode(',', $target_addrs);
-		//var_dump($target_addrs);exit;
+		$loginName 	= $this->getLoginName();
+		$op_log 	= WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
 
 		$rsync_info = '';
-		include(ABSPATH.'/app/core/cp_op.php');
+		foreach ($target_addrs as $target_addr) {
+			foreach ($_list as $key => $value) {
+				$relative_position_dir 	= str_replace($local_project_dir, '', $value);
+				$relative_position_dir 	= trim($relative_position_dir, '/');
+				$target_addr 			= trim($target_addr, '/');
+				$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
 
-		foreach($target_addrs as $target_addr){
 
-			if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){
-
-				foreach ($_list as $key => $value) {
-					$relative_position_dir 	= str_replace($local_project_dir, '', $value);
-					$relative_position_dir 	= trim($relative_position_dir, '/');
-					$target_addr 			= trim($target_addr, '/');
-					$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
-
-					#if (is_dir($value)){
-						$target_service_addr = dirname($target_service_addr).'/';
-						$value = dirname($value).'/';
-					#}
-
-					//var_dump($value, $target_service_addr);exit;
-
-					$config = "--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*";
-					$cmd ="rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
-					//passthru($cmd, $ret);
-					exec($cmd, $ret, $status);
-					#$rsync_info .= $cmd."<br>";
-
-					foreach ($ret as $rk => $rv) {
-						$rsync_info .= $rv."<br>";
-					}
-					$rsync_info .=  "<br>";
-
-					if ($status != 0 ){
-						$rsync_info .= "<span style='color:red;'>rsync -avz --delete {$target_service_addr} {$value} FAIL</span><br>";
-						$this->rycLog($op_log, "rsync -avz --delete {$target_service_addr} {$value} FAIL");
-					} else {
-						$rsync_info .= "<span style='color:blue;'>rsync -avz --delete {$target_service_addr} {$value}  SUCCESS</span><br>";
-						$this->rycLog($op_log, "rsync -avz --delete {$target_service_addr} {$value} SUCCESS");
-					}
-				}
-			} else {
-
-				foreach ($_list as $key => $value) {
-					$relative_position_dir 	= str_replace($local_project_dir, '', $value);
-					$relative_position_dir 	= trim($relative_position_dir, '/');
-					$target_addr 			= trim($target_addr, '/');
-					$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
-
+				if($type == 'add'){
 					if (is_dir($value)){
 						$target_service_addr = dirname($target_service_addr);
 					}
 
-					//echo "rsync -avz {$value} {$t_addr}\r\n";
-					$config = '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
-					// $config = '';
-					$cmd = "rsync -avz {$config} {$value} {$target_service_addr} 2>>{$op_log}";
-					//$exe_string = passthru($cmd, $ret);
-					exec($cmd, $ret, $status);
-					foreach ($ret as $rk => $rv) {
-						$rsync_info .=  $rv."<br>";
+					//var_dump($this->rsync_config,$value,$target_service_addr);exit;
+
+					$cmd = "rsync -avz {$this->rsync_config} {$value} {$target_service_addr} 2>>{$op_log}";
+				} else if($type == 'delete'){
+
+					$target_service_addr = dirname($target_service_addr).'/';
+					$value = dirname($value).'/';
+
+					$cmd = "rsync -avz {$this->rsyncd_config} {$value} {$target_service_addr} 2>>{$op_log}";
+				} else {
+
+					if (is_dir($value)){
+						$target_service_addr = dirname($target_service_addr);
 					}
+					$cmd = "rsync -avz {$this->rsync_config} {$value} {$target_service_addr} 2>>{$op_log}";
+				}
 		
 
+				//var_dump($cmd);
+				exec($cmd, $ret, $status);
+				if ($rsync_return){
+					foreach ($ret as $rk => $rv) {
+						$rsync_info .=  $rv."<br />";
+					}
+				}
+				$rsync_info .= "<br />";
+
+				if($type == 'add'){
+					$tmp = "rsync -avz {$value} {$target_service_addr}";
 					if ($status != 0 ){
-						$rsync_info .= "<span style='color:red;'>rsync -avz {$value} {$target_service_addr} FAIL</span><br>";
-						$this->rycLog($op_log, "rsync -avz {$target_service_addr} {$value} FAIL");
+						$rsync_info .= "<span style='color:red;'>{$tmp} FAIL</span><br>";
+						$this->rycLog($op_log, "{$tmp} FAIL");
 					} else {
-						$rsync_info .= "<span style='color:blue;'>rsync -avz {$value} {$target_service_addr} SUCCESS</span><br>";
-						$this->rycLog($op_log, "rsync -avz {$target_service_addr} {$value} SUCCESS");
+						$rsync_info .= "<span style='color:blue;'>{$tmp} SUCCESS</span><br>";
+						$this->rycLog($op_log, "{$tmp} SUCCESS");
+					}
+				} else if($type == 'delete'){
+					$tmp = "rsync -avz --delete {$value} {$target_service_addr}";
+					if ($status != 0 ){
+						$rsync_info .= "<span style='color:red;'>{$tmp} FAIL</span><br>";
+						$this->rycLog($op_log, "{$tmp} FAIL");
+					} else {
+						$rsync_info .= "<span style='color:blue;'>{$tmp} SUCCESS</span><br>";
+						$this->rycLog($op_log, "{$tmp} SUCCESS");
 					}
 				}
 			}
 		}
-
-		
-
-		$this->rsync_info = $rsync_info;
-		$this->load('copy');
+		return $rsync_info;
 	}
 	
 }

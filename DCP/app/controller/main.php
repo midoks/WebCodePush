@@ -10,7 +10,7 @@ class mainController extends baseController{
 		$this->index_project_name = '';
 		if(isset($_POST['submit'])){
 			$this->rsync_info = '';
-			$file_list = $_POST['file_list'];
+			$file_list = isset($_POST['file_list']) ? $_POST['file_list'] : "";
 			if(!empty($file_list)){
 
 				$file_list = explode("\n", $file_list);
@@ -34,7 +34,7 @@ class mainController extends baseController{
 			} else {
 				$this->rsync_info = '不能为空';
 			}
-			$this->file_list = $_POST['file_list'];
+			$this->file_list = $file_list;
 		}
 
 		$this->list = $this->getUserProjectList();

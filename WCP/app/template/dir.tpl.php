@@ -95,6 +95,9 @@ foreach($this->list as $k=>$v){
 	$str .=	"<input type='hidden' name='file{$k}' value='{$v['abspath']}' />";
 	//处理方法
 	$str .=	"<td style='text-align:center;'>";
+	if($v['type'] == 'file'){
+		$str .=	"<input title='查看源码' type='submit' name='single{$k}' value='S' onfocus=return button_click('o') />&nbsp;";
+	}
 	$str .=	"<input title='复制文件' type='submit' name='single{$k}' value='>' onfocus=return button_click('o') />&nbsp;";
 	// $str .=	"<input title='删除项目中不存在的文件' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
 	$str .=	"</td>";
