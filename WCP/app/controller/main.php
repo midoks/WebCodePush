@@ -140,7 +140,6 @@ class mainController extends baseController{
 				exit('代码目录不存在!!!');
 			}
 
-
 		} else {
 			exit('项目已经不存在');
 		}
@@ -153,6 +152,7 @@ class mainController extends baseController{
 		$op_log 	= WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
 
 		$rsync_info = '';
+
 		foreach ($target_addrs as $target_addr) {
 			foreach ($_list as $key => $value) {
 				$relative_position_dir 	= str_replace($local_project_dir, '', $value);

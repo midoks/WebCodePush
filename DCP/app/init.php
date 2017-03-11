@@ -1,10 +1,10 @@
 <?php 
-set_time_limit(0);
-define("WCP_APP_DIR", 'app');
+//set_time_limit(0);
+define('WCP_APP_DIR', 'app');
 define('WCP_ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))));
 define('WCP_CORE', WCP_ROOT.'/'.WCP_APP_DIR.'/core');
 define('WCP_CTR', WCP_ROOT.'/'.WCP_APP_DIR.'/controller');
-define("WCP_TPL", WCP_ROOT.'/'.WCP_APP_DIR.'/template');
+define('WCP_TPL', WCP_ROOT.'/'.WCP_APP_DIR.'/template');
 include(WCP_CORE.'/func.php');
 include(WCP_CORE.'/opt.php');
 include(WCP_CTR.'/base.php');

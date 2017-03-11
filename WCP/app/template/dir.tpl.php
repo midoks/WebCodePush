@@ -99,7 +99,8 @@ foreach($this->list as $k=>$v){
 		$str .=	"<input title='查看源码' type='submit' name='single{$k}' value='S' onfocus=return button_click('o') />&nbsp;";
 	}
 	$str .=	"<input title='复制文件' type='submit' name='single{$k}' value='>' onfocus=return button_click('o') />&nbsp;";
-	// $str .=	"<input title='删除项目中不存在的文件' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
+
+	$str .=	"<input title='删除项目中不存在的文件' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
 	$str .=	"</td>";
 
 	

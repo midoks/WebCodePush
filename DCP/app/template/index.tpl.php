@@ -40,17 +40,15 @@
 		<th colspan="3" style="text-align: center;font-size:16px;font-weight: bold;">项目部署</th>
 	<tr>
 	<tr>
-		<th style="width: 400px;text-align:center">同步文件</th>
+		<th style="width: 450px;text-align:center">同步文件</th>
 		<th style="text-align:center">同步日志</th>
 	<tr>
 
 	<tr class="list" style="background: white;">
-		<td colspan="2">
+		<td>
 
 <!-- 部署项目 -->
-<div style="width: 405px;float: left;">
-			部署项目:<select name='project_name'>
-				
+部署项目:<select name='project_name'>
 <?php				
 if (!empty($this->list)){
 	foreach($this->list as $k=>$v){
@@ -66,21 +64,31 @@ if (!empty($this->list)){
 ?>
 			</select><br />
 			<textarea style="margin-top:2px;font-size: 15px;" rows="15" cols="50" name='file_list' 
-			spellcheck="false"><?php 
+			spellcheck="false"><?php
+
 if (!empty($this->file_list)){
-	echo $this->file_list;
+	//var_dump($this->file_list);
+	if( is_array($this->file_list) ) {
+		foreach ($this->file_list as $value) {
+			echo $value;
+		}
+	} else if( is_string($this->file_list) ){
+		echo $this->file_list;
+	}
 }
+
 ?></textarea>
-</div>
 
 <!-- 部署日志 -->
-<div style="border-left: 1px solid silver;width:570px;float: left;padding: 5px;">
+</div>
+	</td>
+
+	<td style="margin-top:0;padding-top: 0;display: block;border: none;">
 <?php				
 if (!empty($this->rsync_info)){
 	echo $this->rsync_info;
 }
 ?>
-</div>
 	</td>
 
 	</tr>
