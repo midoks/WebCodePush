@@ -50,24 +50,20 @@ if (isset($this->error)){
 ?>
 
 <tr class='list'><td style="text-align: left;">
-	项目名:<input type="text" name="project_name" value="
-<?php 
+	项目名:<input type="text" name="project_name" value="<?php 
 	if(isset($this->project_info['project_name'])){
 		echo $this->project_info['project_name'];
 	}
-?>
-	">
+?>">
 	<span style="color: red;">bbs,www</span>
 </td><tr>
 
 <tr class='list'><td style="text-align: left;">
-	站&nbsp;&nbsp;&nbsp;名:<input style="width: 200px;" type="text" name="project_site" value="
-<?php 
+	站&nbsp;&nbsp;&nbsp;名:<input style="width: 200px;" type="text" name="project_site" value="<?php 
 	if(isset($this->project_info['project_site'])){
 		echo $this->project_info['project_site'];
 	}
-?>
-	">
+?>">
 	<span style="color: red;">http://www.baidu.com/</span>
 </td><tr>
 

@@ -7,8 +7,9 @@
 <![endif]-->
 <html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta charset="UTF-8" />
+<script type="text/javascript" src="resoures/js/jquery.min.js"></script>
 <title>DCP「网站代码同步」</title>
 <style>
 *{
