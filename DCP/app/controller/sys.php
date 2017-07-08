@@ -75,8 +75,9 @@ class sysController extends baseController{
 		if (isset($_POST['submit'])) {
 
 			$content = wcp_add_project($_POST);
+
 			$repo = $_POST['project_name'];
-			$repo = WCP_ROOT.'/conf/project/'.$repo.'.php';
+			$repo = WCP_ROOT."/conf/project/{$repo}.php";
 			
 			$ret = file_put_contents($repo, $content);
 			if($ret){
@@ -147,16 +148,14 @@ class sysController extends baseController{
 	public function useradd(){
 
 		if (isset($_POST['submit'])) {
+
 			$username = $_POST['username'];
-
-			$_POST['pwd'] = md5($_POST['pwd']);
-			$content = wcp_add_user($_POST);
-
 			$user_file = WCP_ROOT.'/conf/acl/'.$username.'.php';
 			if (file_exists($user_file)){
 				$this->error = "已经存在此用户";
 			} else {
-				$ret = file_put_contents($user_file, $content);
+				$_POST['pwd'] = md5($_POST['pwd']);
+				$ret = update_user_info($_POST);
 				if($ret){
 					$this->jump($this->buildUrl('user', '', 'sys'));
 				} else {
@@ -164,7 +163,6 @@ class sysController extends baseController{
 				}
 			}
 		}
-
 
 		$this->title = "添加用户";
 		$this->load('useradd');
@@ -185,9 +183,7 @@ class sysController extends baseController{
 				$_POST['pwd'] = md5($_POST['pwd']);
 			}
 
-			$content = wcp_add_user($_POST);
-			$user_file = WCP_ROOT.'/conf/acl/'.$username.'.php';
-			$ret = file_put_contents($user_file, $content);
+			$ret = update_user_info($_POST);
 			if($ret){
 				$this->jump($this->buildUrl('user', '', 'sys'));
 			} else {

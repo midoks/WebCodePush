@@ -165,15 +165,32 @@ class mainController extends baseController{
 			if(!file_exists($_info['project_source'])){
 				exit('代码目录不存在!!!');
 			}
-
-
 		} else {
 			exit('项目已经不存在');
 		}
 		
+		
 		$local_project_dir 	= $_info['project_source'];
-		$target_addrs		= $_info['project_target'];
-		$target_addrs 		= explode(',', $target_addrs);
+		if (isset($_info['project_mode']) && $_info['project_mode'] == 0){
+			
+			$target_addrs	= $_info['project_target'];
+			$target_addrs 	= explode(',', $target_addrs);
+
+		} else if(isset($_info['project_mode']) && $_info['project_mode'] == 1){
+
+			$pub_ip		= $_info['project_pub_ip'];
+			$pub_name	= $_info['project_pub_name'];
+			$pub_ip_list = explode(',', $pub_ip);
+			foreach ($pub_ip_list as $key => $value) {
+				$target_addrs[] = 'rsync://'.$value.'/'.$pub_name.'/';
+			}
+
+
+		} else {
+			exit("请填写配置文件正确!");
+		}
+
+		//var_dump($target_addrs);exit;
 
 		$loginName 	= $this->getLoginName();
 		$op_log 	= WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";
@@ -185,7 +202,6 @@ class mainController extends baseController{
 				$relative_position_dir 	= trim($relative_position_dir, '/');
 				$target_addr 			= trim($target_addr, '/');
 				$target_service_addr 	= $target_addr.'/'.$relative_position_dir;
-
 
 				if($type == 'add'){
 					if (is_dir($value)){

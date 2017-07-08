@@ -1,0 +1,72 @@
+2017/07/08 20:04:12 [error] 2269#0: *2998 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project_add.tpl.php on line 89
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->projectadd() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:70
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=projectadd HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=project"
+2017/07/08 20:04:12 [error] 2269#0: *2998 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project_add.tpl.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->projectadd() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:70
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=projectadd HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=project"
+2017/07/08 20:10:17 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=bbs"
+2017/07/08 20:10:17 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=bbs"
+2017/07/08 20:10:29 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=bbs"
+2017/07/08 20:10:29 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=bbs"
+2017/07/08 20:10:32 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=hi"
+2017/07/08 20:10:32 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=hi"
+2017/07/08 20:11:01 [error] 2269#0: *3030 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: project_mode in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/project.tpl.php on line 79
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. sysController->project() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/sys.php:45
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=sys&_m=project HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=projectmod&project=hi"

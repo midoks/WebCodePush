@@ -36,14 +36,16 @@
 <table class='main_table'>
 
 	<tr>
-		<th colspan="5" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
+		<th colspan="7" style="text-align: center;font-size:16px;font-weight: bold;">项目管理</th>
 	<tr>
 	<tr>
 		<th style="text-align:center">项目名</th>
 		<th style="text-align:center">项目说明</th>
-		<th style="text-align:center">目标地址</th>
+		<th style="text-align:center">使用模式</th>
+		<th style="text-align:center">目标地址(测试)</th>
+		<th style="text-align:center">前端服务器(线上)</th>
+		<th style="text-align:center">发布方式</th>
 		<th style="text-align:center">站点名</th>
-		<th style="text-align:center">命令</th>
 	<tr>
 
 <?php
@@ -59,27 +61,31 @@ if (!empty($this->list)){
 		
 		//介绍
 		if (!empty($v['project_desc'])) {
-			$str .=	"<td style='width:60%;'>{$v['project_desc']}</td>";
+			$str .=	"<td>{$v['project_desc']}</td>";
 		} else {
-			$str .=	"<td style='width:60%;'>暂无</td>";
+			$str .=	"<td>暂无</td>";
 		}
 
-		//站点信息
+		if (isset($v['project_mode']) &&  $v['project_mode'] == 0){
+			$str .=	"<td>测试</td>";
+		} else if (isset($v['project_mode']) &&  $v['project_mode'] == 1){
+			$str .=	"<td>线上</td>";
+		} else{
+			$str .=	"<td>暂无设置</td>";
+		}
+
+		
+		//目标地址
 		$str .=	"<td>{$v['project_target']}</td>";
+
+		$str .=	"<td>{$v['project_pub_ip']}</td>";
+		$str .=	"<td>{$v['project_pub_name']}</td>";
 		
 		//站点信息
 		if (!empty($v['project_site'])) {
-			$str .=	"<td style='width:20%;'>{$v['project_site']}</td>";
+			$str .=	"<td>{$v['project_site']}</td>";
 		} else {
-			$str .=	"<td style='width:20%;'>暂无</td>";
-		}
-
-		//命令
-		if (!empty($v['project_cmd'])) {
-			$url = $this->buildUrl('_cmd', array('project'  => $v['project_name']));
-			$str .=	"<td style='width:20%;'><input title='执行命令' type='button' value='CMD' onclick=javaScript:button_click('{$url}') /></td>";
-		} else {
-			$str .=	"<td style='width:20%;'>暂无</td>";
+			$str .=	"<td>暂无</td>";
 		}
 		
 		$str .= "</tr>";

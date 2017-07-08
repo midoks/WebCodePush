@@ -49,10 +49,23 @@ if (isset($this->error)){
 }
 ?>
 
-<tr class='list'><td style="text-align: left;">密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd" value=""><span style="color:red;"></span></td><tr>
+<tr class='list'>
+	<td>账号</td>
+	<td style="text-align: left;"><?php echo $this->userinfo['username']; ?></td>
+<tr>
+
+<tr class='list'>
+	<td>密码</td>
+	<td style="text-align: left;"><input type="password" name="pwd" value=""><span style="color:red;"></span>
+	</td>
+<tr>
 
 
-<tr class='list'><td style="text-align: left;"><input type="submit" name="submit" value="提交"></td><tr>
+<tr class='list'>
+	<td colspan="2" style="text-align: center;">
+		<input type="submit" name="submit" value="提交">
+	</td>
+<tr>
 
 </form>
 

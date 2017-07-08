@@ -83,7 +83,7 @@ if (!empty($this->file_list)){
 </div>
 	</td>
 
-	<td style="margin-top:0;padding-top: 0;display: block;border: none;">
+	<td style="margin-top:0;padding-top: 0;display: block;min-height:400px;">
 <?php				
 if (!empty($this->rsync_info)){
 	echo $this->rsync_info;
@@ -93,7 +93,7 @@ if (!empty($this->rsync_info)){
 
 	</tr>
 
-	<tr class='list'><td colspan="2" style="text-align: left;"><input type="submit" name="submit" value="提交"></td><tr>
+	<tr class='list'><td colspan="2" style="text-align: center;"><input type="submit" name="submit" value="提交"></td><tr>
 
 </table>
 </form>

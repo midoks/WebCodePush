@@ -50,14 +50,22 @@ if (isset($this->error)){
 ?>
 
 
-<tr class='list'><td style="text-align: left;">
-用户名:<input type="text" name="username" value="<?php echo $this->userinfo['username']; ?>">
-</td><tr>
+<tr class='list'>
+	<td>用户名</td>
+	<td><input type="text" name="username" value="<?php echo $this->userinfo['username']; ?>"></td>
+	<td>账户名称</td>
+<tr>
 
-<tr class='list'><td style="text-align: left;">密&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd" value=""><span style="color:red;">为空,密码不改变</span></td><tr>
+<tr class='list'>
+	<td>密&nbsp;&nbsp;&nbsp;&nbsp;码</td>
+	<td style="text-align: left;"><input type="password" name="pwd" value=""></td>
+	<td><span style="color:red;">为空,密码不改变</span></td>
+<tr>
 
-<tr class='list'><td style="text-align: left;">
-	权限:<select name='type'>
+<tr class='list'>
+	<td>权限</td>
+	<td style="text-align: left;">
+	<select name='type'>
 	<option value='0' <?php 
 		if($this->userinfo['type'] == 0){
 			echo 'selected="selected"';
@@ -75,16 +83,21 @@ if (isset($this->error)){
 			echo 'selected="selected"';
 		}
 	?>>观察者</option>
-</select></td><tr>
-
-<tr class='list'>
-	<td style="text-align: left;">
-	项目:<textarea rows="15" cols="100" name="project"><?php echo $this->userinfo['project']; ?></textarea>
-	添加项目,逗号(,)分割
+</select>
 	</td>
+	<td>权限</td>
 <tr>
 
-<tr class='list'><td style="text-align: left;"><input type="submit" name="submit" value="提交"></td><tr>
+<tr class='list'>
+	<td>项目</td>
+
+	<td style="text-align: left;">
+	<textarea rows="2" cols="100" name="project"><?php echo $this->userinfo['project']; ?></textarea>
+	</td>
+	<td>添加项目,逗号(,)分割</td>
+<tr>
+
+<tr class='list'><td colspan="3" style="text-align: center;"><input type="submit" name="submit" value="提交"></td><tr>
 
 </form>
 

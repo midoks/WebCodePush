@@ -50,18 +50,39 @@ if (isset($this->error)){
 ?>
 
 
-<tr class='list'><td style="text-align: center;">用户名:<input type="text" name="username" value=""></td><tr>
-<tr class='list'><td style="text-align: center;">密码:<input type="password" name="pwd" value=""></td><tr>
+<tr class='list'>
+	<td>用户名</td>
+	<td><input type="text" name="username" value=""></td>
+	<td>用户名</td>
+<tr>
 
-<tr class='list'><td style="text-align: center;">
-	权限:<select name='type'>
-	<option value='0'>系统管理</option>
-	<option value='1' selected="selected">开发者</option>
-	<option value='2'>观察者</option>
-</select></td><tr>
+<tr class='list'>
+	<td>密码</td>
+	<td><input type="password" name="pwd" value=""></td>
+	<td>密码</td>
+<tr>
 
-<tr class='list'><td style="text-align: center;">项目:<textarea rows="15" cols="100" name="project" value="" ></textarea></td><tr>
-<tr class='list'><td style="text-align: center;"><input type="submit" name="submit" value="提交"></td><tr>
+<tr class='list'>
+	<td>权限</td>
+	<td>
+		<select name='type'>
+			<option value='0'>系统管理</option>
+			<option value='1' selected="selected">开发者</option>
+			<option value='2'>观察者</option>
+		</select>
+	</td>
+	<td>权限</td>
+<tr>
+
+<tr class='list'>
+	<td>项目</td>
+	<td><textarea rows="3" cols="63" name="project" value="" ></textarea></td>
+	<td>项目</td>
+<tr>
+
+<tr class='list'>
+	<td style="text-align: center;" colspan="3"><input type="submit" name="submit" value="提交"></td>
+<tr>
 
 </form>
 

@@ -22,12 +22,9 @@ class userController extends baseController{
 			if(empty($pwd)){
 				$this->error = '密码不能空';
 			}
-
+			
 			$this->userinfo['pwd'] = md5($pwd);
-
-			$content = wcp_add_user($this->userinfo);
-			$user_file = WCP_ROOT.'/conf/acl/'.$this->userinfo['username'].'.php';
-			$ret = file_put_contents($user_file, $content);
+			$ret = update_user_info($this->userinfo);
 			if($ret){
 				$this->jump($this->buildUrl('index', ''));
 			} else {

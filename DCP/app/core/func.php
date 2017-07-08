@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * 输出变量
+ */
+function E($var, $key){
+	if(isset($var[$key])){
+		echo $var;
+	}
+}
+
+/**
  * @dir string 获取目录地址和相关信息
  */
 function wcp_dir_list($dir){
