@@ -33,7 +33,7 @@ textarea {padding: 4px;}
 <body>
 
 <div style="margin:8px;text-align: right;">
-
+<span>(<?php echo $this->userinfo['username'];?>) | </span>
 <span><a href='<?php echo $url = $this->buildUrl('index', ''); ?>'>部署代码</a></span>
 <span>|</span>
 <span><a href='<?php echo $url = $this->buildUrl('project_list', ''); ?>'>项目列表</a></span>
