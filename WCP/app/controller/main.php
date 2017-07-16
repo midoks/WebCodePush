@@ -116,7 +116,6 @@ class mainController extends baseController{
 				$source_code = htmlentities($source_code);
 				//$source_code = str_replace("\n", '<br>', $source_code);
 				$this->source_code = $source_code;
-				$this->suffix = ucfirst($file_type);
 				$this->load('code');
 			} else {
 				echo "Unauthorized access";

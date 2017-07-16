@@ -65,6 +65,13 @@ if (isset($this->error)){
 	<td><span>隐藏一些文件!!!(,分割)例如:.,..,DS_Store,metadata</span></td>
 <tr>
 
+<tr class='list'>
+	<td>可看文件</td>
+	<td style="text-align: left;">
+		<textarea rows="2" cols="63" name="var[source_view]"><?php echo isset($this->conf['source_view']) ? $this->conf['source_view'] : ''; ?></textarea>
+		</td>
+	<td><span>可以观察文件(,分割)例如:html,php</span></td>
+<tr>
 
 
 <tr class='list'>

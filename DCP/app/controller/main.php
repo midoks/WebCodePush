@@ -17,6 +17,9 @@ class mainController extends baseController{
 
 		$this->rsync_config = $trsync;
 		$this->rsyncd_config = '--delete '.$trsync;
+
+		$tmp = explode(',', $this->conf['source_view']);
+		$this->source_view = $tmp;
 	}
 
 	//项目页
@@ -146,11 +149,13 @@ class mainController extends baseController{
 			$file_type = $file_ex[count($file_ex) - 1];
 			//var_dump($file_type);
 			$source_code = file_get_contents($_list[0]);
-			if(in_array($file_type, array('php','css','js','htaccess', 'txt','sql', 'shtml', 'html','sh'))){
+			if(in_array($file_type, $this->source_view)){
 				$source_code = htmlentities($source_code);
-				$source_code = str_replace("\n", '<br>', $source_code);
+				// $source_code = str_replace("\n", '<br>', $source_code);
 				$this->source_code = $source_code;
 				$this->load('code');
+			} else {
+				echo "Unauthorized access";
 			}
 			exit;
 		} else if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){ //删除项目不存在的文件 && 同步项目
