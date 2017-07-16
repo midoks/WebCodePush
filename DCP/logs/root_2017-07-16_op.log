@@ -1,0 +1,9 @@
+rsync: failed to connect to 121.42.151.169: Connection refused (61)
+rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
+[13:11:51]:	rsync -avz /Users/midoks/Desktop/www/md_cc/application/Bootstrap.php rsync://121.42.151.169/test/application/Bootstrap.php FAIL
+rsync: failed to connect to 121.42.151.169: Connection refused (61)
+rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
+[13:12:02]:	rsync -avz --delete /Users/midoks/Desktop/www/md_cc/application/ rsync://121.42.151.169/test/application/ FAIL
+rsync: failed to connect to 121.42.151.169: Connection refused (61)
+rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
+[13:12:05]:	rsync -avz /Users/midoks/Desktop/www/md_cc/application/modules rsync://121.42.151.169/test/application FAIL

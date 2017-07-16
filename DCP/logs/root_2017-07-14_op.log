@@ -1,0 +1,6 @@
+rsync: failed to connect to 121.42.151.169: Connection refused (61)
+rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
+[18:29:18]:	rsync -avz /Users/midoks/Desktop/www/md_cc/rsa rsync://121.42.151.169/test FAIL
+rsync: failed to connect to 121.42.151.169: Connection refused (61)
+rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
+[18:32:05]:	rsync -avz /Users/midoks/Desktop/www/md_cc/static/1.jpg rsync://121.42.151.169/test/static/1.jpg FAIL

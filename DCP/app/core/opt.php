@@ -19,10 +19,10 @@ function update_user_info(array $info){
  */
 function php_args_align(array $info){
 
-	$content = "<?php return array(\r\n";
+	$content = "<?php\r\nreturn array(\r\n";
 
 	foreach($info as $k => $v){
-		$content .= " '$k'=>'$v', \r\n";
+		$content .= "\t'$k'=>'$v', \r\n";
 	}
 
 	$content .= ");\r\n?>";

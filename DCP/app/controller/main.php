@@ -4,6 +4,21 @@ class mainController extends baseController{
 	public $rsync_config 	= '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
 	public $rsyncd_config 	= '--delete --exclude=*svn* --exclude=*.log* --exclude=*conf*';
 
+	public function __construct(){
+		parent::__construct();
+
+		$this->conf['hidden'] = explode(',', $this->conf['hidden']);
+		$tmp = explode(',', $this->conf['filter']);
+		$trsync = '';
+		foreach ($tmp as $k => $v) {
+			$trsync .= "--execlude=*{$v}* ";
+		}
+		//var_dump($trsync);
+
+		$this->rsync_config = $trsync;
+		$this->rsyncd_config = '--delete '.$trsync;
+	}
+
 	//项目页
 	public function index(){
 
@@ -84,7 +99,7 @@ class mainController extends baseController{
 		}
 
 		$list = wcp_fileinfo_list($project_dir);
-		$list = wcp_filter_list($list, $this->config['hidden_file']);
+		$list = wcp_filter_list($list, $this->conf['hidden']);
 		$list = wcp_file_sort($list);
 		
 		//var_dump($list);exit;
@@ -134,8 +149,10 @@ class mainController extends baseController{
 			if(in_array($file_type, array('php','css','js','htaccess', 'txt','sql', 'shtml', 'html','sh'))){
 				$source_code = htmlentities($source_code);
 				$source_code = str_replace("\n", '<br>', $source_code);
+				$this->source_code = $source_code;
+				$this->load('code');
 			}
-			echo($source_code);exit;
+			exit;
 		} else if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){ //删除项目不存在的文件 && 同步项目
 			$rsync_info .= $this->rsync_file($project, $_list, 'delete');
 		} else {
@@ -185,12 +202,9 @@ class mainController extends baseController{
 				$target_addrs[] = 'rsync://'.$value.'/'.$pub_name.'/';
 			}
 
-
 		} else {
 			exit("请填写配置文件正确!");
 		}
-
-		//var_dump($target_addrs);exit;
 
 		$loginName 	= $this->getLoginName();
 		$op_log 	= WCP_ROOT."/logs/".$loginName.'_'.date('Y-m-d')."_op.log";

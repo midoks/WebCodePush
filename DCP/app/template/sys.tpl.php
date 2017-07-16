@@ -41,10 +41,9 @@
 <tr>
 	<th style="text-align:center;width:100px;">
 		<div>
-		<a style="text-decoration: none;" 
-			href="<?php echo $this->buildUrl('project', '', 'sys'); ?>">项目管理</a>
-		<a style="text-decoration: none;" 
-			href="<?php echo $this->buildUrl('user', '', 'sys'); ?>">开发者管理</a>
+		<a href="<?php echo $this->buildUrl('project', '', 'sys'); ?>">项目管理</a>
+		<a href="<?php echo $this->buildUrl('user', '', 'sys'); ?>">开发者管理</a>
+		<a href="<?php echo $this->buildUrl('index', '', 'conf'); ?>">配置管理</a>
 		</div>
 	</th>
 <tr>

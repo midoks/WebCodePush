@@ -3,10 +3,10 @@
 <style type="text/css">
 
 .login{
-	width: 300px;
+	width: 400px;
 	height: 200px;
 	margin: 100px auto auto auto;
-	/*background-color: red;*/
+/*	background-color: red;*/
 	border: 1px solid gray;
 }	
 
@@ -24,13 +24,13 @@
 		?>
 
 		<tr>
-		<td style="text-align:right;">用户名:</td>
-		<td><input type="text" name="user" value="" /> </td>
+		<td style="text-align:right;">用户:</td>
+		<td><input type="text" name="user" value=""/></td>
 		<tr>
 
 		<tr>
 		<td style="text-align:right;">密码:</td>
-		<td><input type="password" name="pwd" value="" /> </td>
+		<td><input type="password" name="pwd" value=""/> </td>
 		<tr>
 
 		<tr>
@@ -38,11 +38,7 @@
 			<input type="submit" name="submit" value="提交">
 		</td>
 		</tr>
-
-
 		</table>
-
 	</div>
-
 </div>
 </form>

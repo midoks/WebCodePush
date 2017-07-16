@@ -26,9 +26,7 @@
 	background: white;
 }
 
-.list a{
-	font-size:12px;
-}
+
 
 .list input{
 	padding: 0px 6px 0px 6px;
@@ -100,7 +98,10 @@ foreach($this->list as $k=>$v){
 	}
 
 	$str .=	"<input title='复制文件' type='submit' name='single{$k}' value='>' onfocus=return button_click('o') />&nbsp;";
-	$str .=	"<input title='删除当前项目目录中不存在的文件' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
+
+	if ($v['type'] == 'dir'){
+		$str .=	"<input title='删除当前项目目录中不存在的文件' type='submit' name='single{$k}' value='D' onfocus=return button_click('o') />";
+	}
 	$str .=	"</td>";
 
 	

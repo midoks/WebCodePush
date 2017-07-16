@@ -1,0 +1,1453 @@
+2017/07/14 16:26:05 [error] 13489#0: *469 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: mainController::$list in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/code.tpl.php on line 71
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_copy() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:138
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=main&_m=_copy&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=_dir&project=bbs&abspath=/Users/midoks/Desktop/www/md_cc/application/controllers"
+2017/07/14 16:26:05 [error] 13489#0: *469 FastCGI sent in stderr: "PHP message: PHP Warning:  Invalid argument supplied for foreach() in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/code.tpl.php on line 71
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_copy() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:138
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=main&_m=_copy&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=_dir&project=bbs&abspath=/Users/midoks/Desktop/www/md_cc/application/controllers"
+2017/07/16 11:26:25 [error] 4859#0: *123 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: confController::$title in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/conf.tpl.php on line 40
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:22
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=index"
+2017/07/16 11:29:54 [error] 4859#0: *138 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: confController::$title in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/conf.tpl.php on line 40
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:22
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=index"
+2017/07/16 11:40:53 [error] 4859#0: *191 FastCGI sent in stderr: "PHP message: PHP Warning:  trim() expects parameter 1 to be string, array given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php on line 35
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37
+PHP message: PHP   5. baseController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:13
+PHP message: PHP   6. trim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:35" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 12:08:32 [error] 4859#0: *207 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Maximum function nesting level of '256' reached, aborting! in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php on line 236
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37
+PHP message: PHP   5. baseController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:13
+PHP message: PHP   6. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:34
+PHP message: PHP   7. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP   8. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP   9. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  10. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  11. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  12. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  13. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  14. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  15. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  16. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  17. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  18. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  19. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  20. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  21. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  22. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  23. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  24. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  25. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  26. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  27. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  28. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  29. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  30. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  31. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message
+2017/07/16 12:08:32 [error] 4859#0: *207 FastCGI sent in stderr: "age: PHP  65. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  66. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  67. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  68. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  69. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  70. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  71. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  72. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  73. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  74. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  75. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  76. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  77. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  78. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  79. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  80. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  81. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  82. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  83. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  84. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  85. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  86. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  87. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  88. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  89. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  90. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  91. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  92. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  93. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  94. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  95. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP  96. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP m
+2017/07/16 12:08:32 [error] 4859#0: *207 FastCGI sent in stderr: "P message: PHP 130. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 131. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 132. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 133. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 134. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 135. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 136. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 137. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 138. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 139. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 140. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 141. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 142. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 143. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 144. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 145. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 146. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 147. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 148. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 149. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 150. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 151. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 152. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 153. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 154. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 155. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 156. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 157. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 158. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 159. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 160. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 161. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+2017/07/16 12:08:32 [error] 4859#0: *207 FastCGI sent in stderr: "241
+PHP message: PHP 195. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 196. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 197. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 198. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 199. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 200. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 201. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 202. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 203. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 204. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 205. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 206. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 207. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 208. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 209. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 210. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 211. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 212. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 213. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 214. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 215. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 216. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 217. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 218. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 219. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 220. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 221. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 222. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 223. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 224. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 225. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:241
+PHP message: PHP 226. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.p
+2017/07/16 12:09:24 [error] 4859#0: *207 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Maximum function nesting level of '256' reached, aborting! in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php on line 236
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37
+PHP message: PHP   5. baseController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:13
+PHP message: PHP   6. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:34
+PHP message: PHP   7. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP   8. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP   9. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  10. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  11. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  12. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  13. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  14. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  15. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  16. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  17. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  18. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  19. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  20. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  21. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  22. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  23. baseController->recTri" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 12:09:24 [error] 4859#0: *207 FastCGI sent in stderr: "m() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  24. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  25. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  26. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  27. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  28. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  29. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  30. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  31. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  32. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  33. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  34. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  35. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  36. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  37. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  38. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  39. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  40. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  41. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  42. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  43. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  44. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  45. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  46. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  47. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  48. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  49. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  50. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  51. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  52. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  53. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  54. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  55. baseController->rec
+2017/07/16 12:09:24 [error] 4859#0: *207 FastCGI sent in stderr: "recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  89. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  90. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  91. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  92. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  93. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  94. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  95. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  96. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  97. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  98. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP  99. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 100. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 101. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 102. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 103. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 104. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 105. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 106. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 107. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 108. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 109. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 110. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 111. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 112. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 113. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 114. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 115. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 116. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 117. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 118. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 119. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 120. baseControlle
+2017/07/16 12:09:24 [error] 4859#0: *207 FastCGI sent in stderr: "ller->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 154. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 155. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 156. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 157. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 158. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 159. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 160. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 161. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 162. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 163. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 164. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 165. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 166. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 167. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 168. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 169. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 170. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 171. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 172. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 173. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 174. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 175. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 176. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 177. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 178. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 179. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 180. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 181. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 182. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 183. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 184. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 185. baseCon
+2017/07/16 12:09:24 [error] 4859#0: *207 FastCGI sent in stderr: "Controller->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 219. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 220. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 221. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 222. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 223. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 224. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 225. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 226. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 227. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 228. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 229. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 230. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 231. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 232. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 233. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 234. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 235. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 236. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 237. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 238. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 239. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 240. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 241. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 242. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 243. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 244. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 245. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 246. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 247. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 248. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 249. baseController->recTrim() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:242
+PHP message: PHP 250. b
+2017/07/16 13:16:15 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP Warning:  include(/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php): failed to open stream: No such file or directory in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:15 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening '/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php' for inclusion (include_path='.:/Applications/mdserver/bin/php/php55/lib/php') in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:15 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php): failed to open stream: No such file or directory in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP Warning:  include(): Failed opening '/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php' for inclusion (include_path='.:/Applications/mdserver/bin/php/php55/lib/php') in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:26 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP Warning:  include(/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php): failed to open stream: No such file or directory in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:26 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Warning:  include(): Failed opening '/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php' for inclusion (include_path='.:/Applications/mdserver/bin/php/php55/lib/php') in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:26 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php): failed to open stream: No such file or directory in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP Warning:  include(): Failed opening '/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php' for inclusion (include_path='.:/Applications/mdserver/bin/php/php55/lib/php') in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 36
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:16:58 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Warning:  include(/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php): failed to open stream: No such file or directory in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 37
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP Warning:  include(): Failed opening '/Users/midoks/Desktop/work/github/WebCodePush/DCP/conf/conf.php' for inclusion (include_path='.:/Applications/mdserver/bin/php/php55/lib/php') in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 37
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:17:03 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:17:20 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:17:43 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:18:00 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:18:18 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:18:33 [error] 4860#0: *263 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:21:08 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:21:19 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: ": PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_s" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "tart() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:22:55 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: ": PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_s" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "tart() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:23:53 [error] 4860#0: *291 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:25:50 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:26:11 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: ": PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_s" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "tart() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:30 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, null given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP messa" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "ge: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:26:59 [error] 4860#0: *329 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:87
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:28:24 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Notice:  Array to string conversion in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/conf.tpl.php on line 55
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:39
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=index"
+2017/07/16 13:28:24 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Notice:  Array to string conversion in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/template/conf.tpl.php on line 63
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. baseController->load() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php:39
+PHP message: PHP   6. include_once() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/base.php:191" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=sys&_m=index"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start()" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "/Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:29:47 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95
+PHP message: PHP Warning:  in_array() expects parameter 2 to be array, string given in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php on line 95
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->_dir() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39
+PHP message: PHP   5. wcp_filter_list() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php:94
+PHP message: PHP   6. in_array() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/core/func.php:95" while reading upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:30:37 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:30:40 [error] 4859#0: *343 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"
+2017/07/16 13:34:55 [error] 4859#0: *384 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: rsync_config in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php on line 18
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37
+PHP message: PHP Fatal error:  Cannot access empty property in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php on line 18
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:35:02 [error] 4859#0: *384 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined variable: rsync_config in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php on line 18
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37
+PHP message: PHP Fatal error:  Cannot access empty property in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/main.php on line 18
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. mainController->__construct() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:37" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "GET /index.php?_c=main&_m=_dir&project=bbs HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=main&_m=project_list"
+2017/07/16 13:35:39 [error] 4859#0: *384 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined index: pwd in /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/controller/conf.php on line 27
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:0
+PHP message: PHP   2. include() /Users/midoks/Desktop/work/github/WebCodePush/DCP/index.php:4
+PHP message: PHP   3. app_start() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:14
+PHP message: PHP   4. confController->index() /Users/midoks/Desktop/work/github/WebCodePush/DCP/app/init.php:39" while reading response header from upstream, client: 127.0.0.1, server: dcp.cn, request: "POST /index.php?_c=conf&_m=index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "dcp.cn", referrer: "http://dcp.cn/index.php?_c=conf&_m=index"

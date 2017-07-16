@@ -27,9 +27,7 @@
 	background: white;
 }
 
-.list a{
-	font-size:14px;
-}
+
 </style>
 
 

@@ -14,7 +14,8 @@ class baseController{
 	public function __construct(){
 		
 		$this->_acl();
-		$this->config = include(WCP_ROOT.'/conf/config.php');
+		$this->conf = include(WCP_ROOT.'/conf/conf.php');
+
 
 		$username = $this->getLoginName();
 		$acl_file = WCP_ROOT."/conf/acl/{$username}.php";
@@ -31,15 +32,11 @@ class baseController{
 		header('WCP_AUTHOR_EMAIL: '.self::AUTHOR_EMAIL);
 
 		if (!empty($_POST)){
-			foreach ($_POST as $key => $value) {
-				$_POST[$key] = trim($value);
-			}
+			$this->recTrim($_POST);
 		}
 
 		if (!empty($_GET)){
-			foreach ($_GET as $key => $value) {
-				$_GET[$key] = trim($value);
-			}
+			$this->recTrim($_GET);
 		}
 	}
 
@@ -233,6 +230,25 @@ class baseController{
 		fwrite($fp, '['.date('H:i:s').']:'."\t".$content."\n");
 		fclose($fp);
 
+	}
+
+	//递归处理
+	public function recTrim($var){
+		//ar_dump($var);
+		if (is_array($var)){
+			foreach ($var as $k => $v) {
+				if (is_string($v)){
+					$var[$k] = $v;
+				} else {
+					$var[$k] = $this->recTrim($v);
+				}
+			}
+			return $var;
+		} else if(is_string($var)) {
+			return trim($var); 
+		} else {
+			return $var;
+		}
 	}
 
 	public function jump($url){

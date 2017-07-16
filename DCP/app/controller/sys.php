@@ -6,7 +6,7 @@
  * 1.添加项目
  * 2.添加用户
  */
-class sysController extends baseController{
+class sysController extends baseController {
 
 	//初始化
 	public function __construct(){
