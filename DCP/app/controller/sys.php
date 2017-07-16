@@ -12,6 +12,8 @@ class sysController extends baseController {
 	public function __construct(){
 		parent::__construct();
 
+		$this->conf['hidden'] = explode(',', $this->conf['hidden']);
+
 		if($this->userinfo['type'] != 0 ){
 			$this->jump($this->buildUrl('index'));
 		}
@@ -26,7 +28,7 @@ class sysController extends baseController {
 	public function project(){
 
 		$projects = wcp_dir_list(WCP_ROOT.'/conf/project/');
-		$projects = wcp_filter_list($projects, $this->config['hidden_file']);
+		$projects = wcp_filter_list($projects, $this->conf['hidden']);
 		
 		$list = array();
 		foreach ($projects as $project) {
@@ -132,7 +134,7 @@ class sysController extends baseController {
 
 		$users = wcp_dir_list(WCP_ROOT.'/conf/acl/');
 		//var_dump($users);
-		$users = wcp_filter_list($users, $this->config['hidden_file']);
+		$users = wcp_filter_list($users, $this->conf['hidden']);
 		//var_dump($users);
 		$list = array();
 		foreach ($users as $user) {
