@@ -7,3 +7,9 @@ rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple
 rsync: failed to connect to 121.42.151.169: Connection refused (61)
 rsync error: error in socket IO (code 10) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/clientserver.c(106) [sender=2.6.9]
 [13:12:05]:	rsync -avz /Users/midoks/Desktop/www/md_cc/application/modules rsync://121.42.151.169/test/application FAIL
+rsync: --execlude=*svn*: unknown option
+rsync error: syntax or usage error (code 1) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/main.c(1337) [client=2.6.9]
+[13:46:25]:	rsync -avz /Users/midoks/Desktop/www/md_cc/logs rsync://121.42.151.169/test FAIL
+rsync: --execlude=*svn*: unknown option
+rsync error: syntax or usage error (code 1) at /BuildRoot/Library/Caches/com.apple.xbs/Sources/rsync/rsync-51/rsync/main.c(1337) [client=2.6.9]
+[13:47:35]:	rsync -avz /Users/midoks/Desktop/www/md_cc/logs rsync://121.42.151.169/test FAIL

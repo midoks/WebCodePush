@@ -110,7 +110,7 @@ class mainController extends baseController{
 	//项目同步
 	public function _copy(){
 
-		if($this->userinfo['type'] != 0){
+		if(($this->userinfo['type'] != 0) && ($this->userinfo['type'] != 1)){
 			exit('no acl ok!');
 		}
 

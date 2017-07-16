@@ -18,6 +18,7 @@ class baseController{
 
 
 		$username = $this->getLoginName();
+		
 		$acl_file = WCP_ROOT."/conf/acl/{$username}.php";
 		if(!file_exists($acl_file)){
 			session_destroy();
