@@ -114,10 +114,14 @@ class mainController extends baseController{
 			$source_code = file_get_contents($_list[0]);
 			if(in_array($file_type, $this->source_view)){
 				$source_code = htmlentities($source_code);
-				$source_code = str_replace("\n", '<br>', $source_code);
+				//$source_code = str_replace("\n", '<br>', $source_code);
 				$this->source_code = $source_code;
+				$this->suffix = ucfirst($file_type);
 				$this->load('code');
+			} else {
+				echo "Unauthorized access";
 			}
+
 			exit;
 		} else if (isset($get_list_value[0]) && $get_list_value[0] == 'D'){ //删除项目不存在的文件 && 同步项目
 			$rsync_info .= $this->rsync_file($project, $_list, 'delete');
