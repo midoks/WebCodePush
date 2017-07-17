@@ -18,7 +18,7 @@
 // if ($status > 0){
 
 // 	foreach ($ret as $key => $value) {
-// 		$rsync_info = $value;
+// 		$rsync_info .= $value ."<br />";
 // 	}
 
 // }
