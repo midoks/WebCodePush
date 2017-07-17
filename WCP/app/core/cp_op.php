@@ -1,9 +1,9 @@
 <?php
 
-// $project_file 	= WCP_ROOT.'/conf/project/'.$project_name.'.php';
+// $project_file 	= WCP_ROOT.'/conf/project/'.$project.'.php';
 // if(file_exists($project_file)){
 // 	$_info 					= include($project_file);
-// 	$_info['project_name'] 	= $project_name;
+// 	$_info['project_name'] 	= $project;
 // } else {
 // 	exit('项目已经不存在');
 // }
