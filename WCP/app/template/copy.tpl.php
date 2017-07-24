@@ -44,7 +44,7 @@
 <tr>
 <th colspan="8" style="text-align: center;font-size:16px;font-weight: bold;">
 文件管理
-<b id="copy" style="float: right;color:red;">复制</b>
+<b id="copy" style="float: right;color:red;cursor:pointer;">复制</b>
 <script type="text/javascript" src="resoures/js/clipboard.min.js"></script>
 </th>
 
