@@ -1,4 +1,10 @@
 <?php  
+/**
+ * 系统管理
+ * 作者 midoks
+ * 创建时间 2016-11-05
+ */
+ 
 class userController extends baseController{
 
 	//退出登陆

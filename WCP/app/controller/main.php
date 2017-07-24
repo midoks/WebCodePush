@@ -1,4 +1,11 @@
 <?php  
+
+/**
+ * 系统管理
+ * 作者 midoks
+ * 创建时间 2016-11-05
+ */
+
 class mainController extends baseController{
 
 	public $rsync_config 	= '--exclude=*svn* --exclude=*.log* --exclude=*conf*';
@@ -200,6 +207,8 @@ class mainController extends baseController{
 					}
 				}
 				$rsync_info .= "<br />";
+
+				$value = "<b class='need_copy_value'>{$value}</b>";
 
 				if($type == 'add'){
 					$tmp = "rsync -avz {$value} {$target_service_addr}";
