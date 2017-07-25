@@ -120,8 +120,6 @@ class mainController extends baseController{
 			//var_dump($file_type);
 			$source_code = file_get_contents($_list[0]);
 			if(in_array($file_type, $this->source_view)){
-				$source_code = htmlentities($source_code);
-				//$source_code = str_replace("\n", '<br>', $source_code);
 				$this->source_code = $source_code;
 				$this->load('code');
 			} else {
