@@ -57,10 +57,10 @@ function deleteRepo(url){
 <tr>
 
 <tr>
-	<th style="text-align:center">用户名</th>
-	<th style="text-align:center">类型</th>
-	<th style="text-align:center">管理项目</th>
-	<th style="text-align:center">操作[<a href="<?php echo $this->buildUrl('useradd', '', 'sys'); ?>">添加</a>]</th>
+	<th style="text-align:center;width: 10%;">用户名</th>
+	<th style="text-align:center;width: 10%;">类型</th>
+	<th style="text-align:center;width: 70%;">管理项目</th>
+	<th style="text-align:center;width: 10%;">操作[<a href="<?php echo $this->buildUrl('useradd', '', 'sys'); ?>">添加</a>]</th>
 <tr>
 
 <?php
@@ -81,7 +81,7 @@ foreach($this->list as $k=>$v){
 	$str .=	"<td>{$v['type']}</td>";
 	
 	//站点信息
-	$str .=	"<td>{$v['project']}</td>";
+	$str .=	'<td style="word-break:break-all;">'."{$v['project']}</td>";
 
 	//操作
 	$str .=	"<td>[<a href='".$this->buildUrl('usermod', array('username'=>$v['username']), 'sys')."'>修改</a>]|";
