@@ -133,6 +133,7 @@ class baseController{
 			$repos = explode(',', trim($this->userinfo['project']));
 			
 			foreach ($repos as $repo) {
+				$repo = trim($repo);
 				$repo_file = WCP_ROOT.'/conf/project/'.$repo.'.php';
 				if(file_exists($repo_file)){
 					$_info = include($repo_file);
